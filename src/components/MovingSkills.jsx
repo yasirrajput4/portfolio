@@ -52,9 +52,9 @@ const MovingSkills = () => {
     <div className="w-full overflow-hidden mb-6 relative flex items-center">
       <div className="flex gap-3 sm:gap-6 whitespace-nowrap animate-marquee">
         {/* First loop batch */}
-        {skillsWithIcons.map((skill, index) => (
+        {skillsWithIcons.map((skill) => (
           <span
-            key={`${skill.name}-first-${index}`}
+            key={`${skill.name}-first`}
             className="text-[rgb(33,150,243)] px-2 sm:px-4 py-1 sm:py-2 rounded-md text-xs sm:text-sm font-medium bg-white flex items-center gap-1 sm:gap-2 transition"
           >
             {React.cloneElement(skill.icon, { size: 14 })}
@@ -62,9 +62,9 @@ const MovingSkills = () => {
           </span>
         ))}
         {/* Second loop batch for seamless sliding */}
-        {skillsWithIcons.map((skill, index) => (
+        {skillsWithIcons.map((skill) => (
           <span
-            key={`${skill.name}-second-${index}`}
+            key={`${skill.name}-second`}
             className="text-[rgb(33,150,243)] px-2 sm:px-4 py-1 sm:py-2 rounded-md text-xs sm:text-sm font-medium bg-white flex items-center gap-1 sm:gap-2 transition"
           >
             {React.cloneElement(skill.icon, { size: 14 })}
