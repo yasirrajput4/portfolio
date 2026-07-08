@@ -1,3 +1,4 @@
+import React from "react";
 import { CiPlay1 } from "react-icons/ci";
 import { LuGithub } from "react-icons/lu";
 import { FaReact, FaNodeJs } from "react-icons/fa";
@@ -9,9 +10,10 @@ import {
   SiTensorflow,
   SiJavascript,
   SiHtml5,
-  SiCss3,
   SiChakraui,
 } from "react-icons/si";
+import { DiCss3 } from "react-icons/di";
+
 import ZaikaImg from "../assets/zaika.png";
 import cineverse from "../assets/cineverse.png";
 import vision from "../assets/vision.png";
@@ -84,7 +86,6 @@ const projects = [
       "Fully functional Instagram clone with authentication, posts, likes, and smooth navigation built with React.js and Firebase.",
     tech: ["React.js", "Firebase", "Chakra UI"],
     github: "https://github.com/yasirrajput4/InstagramClone",
-    // live: "https://your-live-demo.com/instagram-clone",
     image:
       "https://repository-images.githubusercontent.com/465897194/2c2b436f-5b34-4252-a778-0dc359fe0306",
   },
@@ -137,7 +138,7 @@ const techIcons = {
   "TensorFlow.js": <SiTensorflow className="text-[#ff6f00]" />,
   "Node.js": <FaNodeJs className="text-green-600" />,
   HTML: <SiHtml5 className="text-[#e34f26]" />,
-  CSS: <SiCss3 className="text-[#1572B6]" />,
+  CSS: <DiCss3 className="text-[#1572B6]" />,
   "React Router": <FaReact className="text-[#61dafb]" />,
 };
 
@@ -153,9 +154,9 @@ const Projects = () => {
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center">
-        {projects.map((project, index) => (
+        {projects.map((project) => (
           <div
-            key={index}
+            key={project.title}
             className="bg-white rounded-lg overflow-hidden w-[290px] shadow-md border border-gray-200 transform transition duration-300 hover:scale-105 hover:shadow-xl"
           >
             {/* Image */}
@@ -202,9 +203,9 @@ const Projects = () => {
               </p>
 
               <div className="flex gap-2 flex-wrap">
-                {project.tech.map((tech, idx) => (
+                {project.tech.map((tech) => (
                   <span
-                    key={idx}
+                    key={`${project.title}-${tech}`}
                     title={tech}
                     className="bg-gray-100 border border-gray-200 rounded-md p-1 flex items-center justify-center text-sm"
                   >

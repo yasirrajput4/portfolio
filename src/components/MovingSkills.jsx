@@ -6,7 +6,6 @@ import {
   SiTailwindcss,
   SiNextdotjs,
   SiHtml5,
-  SiCss3,
   SiFirebase,
   SiMysql,
   SiGit,
@@ -17,7 +16,7 @@ import {
   SiMongodb,
   SiPostman,
 } from "react-icons/si";
-("react-icons/si");
+import { DiCss3 } from "react-icons/di";
 
 const skillsWithIcons = [
   { name: "React.js", icon: <SiReact /> },
@@ -27,7 +26,7 @@ const skillsWithIcons = [
   // Styling
   { name: "Tailwind CSS", icon: <SiTailwindcss /> },
   { name: "HTML5", icon: <SiHtml5 /> },
-  { name: "CSS3", icon: <SiCss3 /> },
+  { name: "CSS3", icon: <DiCss3 /> },
 
   // Frameworks
   { name: "Next.js", icon: <SiNextdotjs /> },
@@ -52,9 +51,20 @@ const MovingSkills = () => {
   return (
     <div className="w-full overflow-hidden mb-6 relative flex items-center">
       <div className="flex gap-3 sm:gap-6 whitespace-nowrap animate-marquee">
-        {skillsWithIcons.concat(skillsWithIcons).map((skill, index) => (
+        {/* First loop batch */}
+        {skillsWithIcons.map((skill, index) => (
           <span
-            key={index}
+            key={`${skill.name}-first-${index}`}
+            className="text-[rgb(33,150,243)] px-2 sm:px-4 py-1 sm:py-2 rounded-md text-xs sm:text-sm font-medium bg-white flex items-center gap-1 sm:gap-2 transition"
+          >
+            {React.cloneElement(skill.icon, { size: 14 })}
+            {skill.name}
+          </span>
+        ))}
+        {/* Second loop batch for seamless sliding */}
+        {skillsWithIcons.map((skill, index) => (
+          <span
+            key={`${skill.name}-second-${index}`}
             className="text-[rgb(33,150,243)] px-2 sm:px-4 py-1 sm:py-2 rounded-md text-xs sm:text-sm font-medium bg-white flex items-center gap-1 sm:gap-2 transition"
           >
             {React.cloneElement(skill.icon, { size: 14 })}
