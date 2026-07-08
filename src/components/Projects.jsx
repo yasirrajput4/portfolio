@@ -180,6 +180,7 @@ const Projects = () => {
                       rel="noopener noreferrer"
                       className="border border-gray-300 p-1 rounded-md hover:bg-gray-100 transition"
                       title="GitHub"
+                      aria-label={`View source code for ${project.title} on GitHub`}
                     >
                       <LuGithub />
                     </a>
@@ -191,6 +192,7 @@ const Projects = () => {
                       rel="noopener noreferrer"
                       className="border border-gray-300 p-1 rounded-md hover:bg-gray-100 transition"
                       title="Live Demo"
+                      aria-label={`View live demo for ${project.title}`}
                     >
                       <CiPlay1 />
                     </a>

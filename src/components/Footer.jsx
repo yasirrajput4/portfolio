@@ -6,6 +6,9 @@ const Footer = () => {
   const [quote, setQuote] = useState("");
 
   useEffect(() => {
+    // Check to prevent errors if quotes array is empty or missing
+    if (!quotes || quotes.length === 0) return;
+
     const pickQuote = () => {
       setQuote(quotes[Math.floor(Math.random() * quotes.length)]);
     };
@@ -51,6 +54,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               title="GitHub"
+              aria-label="Visit Yasir's GitHub profile"
             >
               <FaGithub />
             </a>
@@ -59,10 +63,15 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               title="LinkedIn"
+              aria-label="Connect with Yasir on LinkedIn"
             >
               <FaLinkedin />
             </a>
-            <a href="mailto:rajputyasir2005@gmail.com" title="Email">
+            <a
+              href="mailto:rajputyasir2005@gmail.com"
+              title="Email"
+              aria-label="Send an email to Yasir"
+            >
               <FaEnvelope />
             </a>
           </div>

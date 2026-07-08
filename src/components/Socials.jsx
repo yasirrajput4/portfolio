@@ -10,6 +10,7 @@ const Socials = () => {
         target="_blank"
         rel="noopener noreferrer"
         className="text-gray-600 hover:text-blue-500 transition"
+        aria-label="Visit Yasir's LinkedIn profile"
       >
         <Linkedin size={24} />
       </a>
@@ -20,6 +21,7 @@ const Socials = () => {
         target="_blank"
         rel="noopener noreferrer"
         className="text-gray-600 hover:text-blue-500 transition"
+        aria-label="Visit Yasir's GitHub profile"
       >
         <Github size={24} />
       </a>
@@ -30,14 +32,18 @@ const Socials = () => {
         target="_blank"
         rel="noopener noreferrer"
         className="text-gray-600 hover:text-blue-500 transition"
+        aria-label="Send an email to Yasir"
       >
         <Mail size={24} />
       </a>
+
+      {/* WhatsApp */}
       <a
         href="https://wa.me/916290840066"
         target="_blank"
         rel="noopener noreferrer"
         className="text-gray-600 hover:text-blue-500 transition"
+        aria-label="Chat with Yasir on WhatsApp"
       >
         <BsWhatsapp size={24} />
       </a>
