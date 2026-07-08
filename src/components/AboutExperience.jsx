@@ -1,35 +1,36 @@
 import React from "react";
 import MovingSkills from "./MovingSkills";
 
+// Static values moved outside the component scope to avoid rebuilding on every render
+const SKILLS = [
+  // Frontend
+  "React.js",
+  "Redux",
+  "JavaScript",
+  "Next.js",
+  "HTML",
+  "CSS",
+  "Tailwind CSS",
+
+  // Backend (MERN)
+  "Node.js",
+  "Express.js",
+  "MongoDB",
+
+  // Database & APIs
+  "SQL",
+  "REST APIs",
+
+  // Tools
+  "Postman",
+  "Git",
+  "GitHub",
+  "Firebase",
+  "Figma",
+  "VS Code",
+];
+
 const AboutExperience = () => {
-  const skills = [
-    // Frontend
-    "React.js",
-    "Redux",
-    "JavaScript",
-    "Next.js",
-    "HTML",
-    "CSS",
-    "Tailwind CSS",
-
-    // Backend (MERN)
-    "Node.js",
-    "Express.js",
-    "MongoDB",
-
-    // Database & APIs
-    "SQL",
-    "REST APIs",
-
-    // Tools
-    "Postman",
-    "Git",
-    "GitHub",
-    "Firebase",
-    "Figma",
-    "VS Code",
-  ];
-
   return (
     <section
       id="about"
@@ -60,7 +61,7 @@ const AboutExperience = () => {
           {/* Skills Capsules */}
           <h3 className="text-md font-bold text-gray-700 mb-2">Skills</h3>
           <div className="flex flex-wrap gap-2 sm:gap-3 mt-2">
-            {skills.map((skill) => (
+            {SKILLS.map((skill) => (
               <span
                 key={skill}
                 className="border border-[rgb(33,150,243)] text-[rgb(33,150,243)] px-2 sm:px-3 py-1 rounded-md text-xs sm:text-sm font-medium hover:bg-[#41474b] hover:text-white transition cursor-pointer"
