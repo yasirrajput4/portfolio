@@ -1,3 +1,4 @@
+import React from "react";
 import Img from "../assets/profile.jpeg";
 
 const Hero = () => {
@@ -20,14 +21,13 @@ const Hero = () => {
       <h2 className="text-3xl sm:text-4xl md:text-5xl text-gray-800 dark:text-gray-100 leading-snug">
         I'm{" "}
         <span className="font-bold text-[rgb(33,150,243)]">Yasir Rajput</span>,
-        full stack developer <br className="hidden sm:inline" /> based in India.
+        <br className="hidden sm:inline" /> full-stack developer based in India.
       </h2>
 
       <p className="text-gray-600 dark:text-gray-400 mt-4 max-w-md sm:max-w-xl md:max-w-2xl text-sm sm:text-base leading-relaxed">
-        Computer Science and Engineering Undergraduate from Ahmedabad, India,
-        building full stack MERN applications and AI-integrated products — from
-        healthcare price tracking to AI-powered platforms and sustainable urban
-        planning tools.
+        CS Undergrad building intelligent MERN applications and AI-powered
+        platforms—from healthcare price trackers to sustainable urban planning
+        tools.
       </p>
 
       {/* Buttons */}

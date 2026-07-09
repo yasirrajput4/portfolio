@@ -102,12 +102,17 @@ const Projects = () => {
             key={project.title}
             className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden w-full shadow-md border border-gray-200 dark:border-gray-700 transform transition duration-300 hover:scale-105 hover:shadow-xl flex flex-col"
           >
-            {/* Screenshot */}
-            <div className="relative">
+            {/*
+              object-cover gives the clean, full-bleed look from the reference
+              screenshot. This only looks right if the source image is already
+              cropped to just the hero/banner section (landscape, ~1.9:1) -
+              see the "how to capture a good screenshot" notes.
+            */}
+            <div className="relative h-[150px] overflow-hidden">
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-[150px] object-cover object-top"
+                className="w-full h-full object-cover"
               />
             </div>
 
