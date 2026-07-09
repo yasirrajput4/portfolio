@@ -8,20 +8,21 @@ const NAV_LINKS = [
   { href: "#contact", label: "Contact" },
 ];
 
+const ThemeToggleButton = ({ className = "" }) => (
+  <button
+    type="button"
+    onClick={toggleTheme}
+    className={`flex items-center justify-center w-10 h-10 rounded-md border border-gray-300 dark:border-gray-700 text-gray-600 dark:text-gray-300 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 transition ${className}`}
+    aria-label={
+      theme === "dark" ? "Switch to light mode" : "Switch to dark mode"
+    }
+  >
+    {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+  </button>
+);
 const Navbar = ({ theme, toggleTheme }) => {
   const [isOpen, setIsOpen] = useState(false);
   const closeMenu = () => setIsOpen(false);
-
-  const ThemeToggleButton = ({ className = "" }) => (
-    <button
-      type="button"
-      onClick={toggleTheme}
-      className={`flex items-center justify-center w-10 h-10 rounded-md border border-gray-300 dark:border-gray-700 text-gray-600 dark:text-gray-300 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 transition ${className}`}
-      aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
-    >
-      {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
-    </button>
-  );
 
   return (
     <header
