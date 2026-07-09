@@ -96,12 +96,6 @@ const Projects = () => {
         My Projects
       </h2>
 
-      {/*
-        Fix: removed fixed card width (was w-[290px]) which didn't fill the
-        grid column on wider screens, causing left-aligned gaps.
-        Cards now use w-full so they stretch to match their grid column,
-        and the whole grid is capped with max-w-5xl so it doesn't get too wide.
-      */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-5xl">
         {projects.map((project) => (
           <div

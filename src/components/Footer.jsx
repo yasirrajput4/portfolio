@@ -78,7 +78,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex-1"></div>
+        <div className="hidden sm:block flex-1"></div>
       </div>
 
       <p className="text-gray-500 dark:text-gray-500 text-sm text-center mt-6 px-4">
