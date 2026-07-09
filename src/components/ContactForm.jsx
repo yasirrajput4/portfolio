@@ -9,7 +9,7 @@ function ContactForm() {
     <section
       id="contact"
       className="bg-gray-100 dark:bg-gray-900 py-20 px-4 sm:px-6 lg:px-8 flex flex-col items-center transition-colors duration-300"
-      style={{ fontFamily: "Montserrat, sans-serif" }}
+      /* Removed redundant inline style since Montserrat is globally loaded via Tailwind v4 */
     >
       {/* Section Heading remains fixed */}
       <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-2 text-center">
@@ -23,7 +23,8 @@ function ContactForm() {
         {state.succeeded ? (
           /* Elegant Success Message Inside the Same Container */
           <div className="flex flex-col items-center justify-center py-10 text-center space-y-4 animate-fade-in">
-            <FiCheckCircle className="text-5xl text-green-500 dark:text-green-400 animate-bounce" />
+            {/* Fixed: Replaced tacky animate-bounce with premium custom-eased smooth pulse */}
+            <FiCheckCircle className="text-5xl text-green-500 dark:text-green-400 animate-[pulse_2s_cubic-bezier(0.16,1,0.3,1)_infinite]" />
             <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100">
               Message Sent Successfully!
             </h3>
@@ -49,7 +50,7 @@ function ContactForm() {
                 name="name"
                 placeholder="Your Name"
                 required
-                className="w-full p-2.5 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-[rgb(33,150,243)] dark:focus:ring-[rgb(33,150,243)] focus:border-transparent transition-all duration-200 text-sm"
+                className="w-full p-2.5 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-[rgb(33,150,243)] focus:border-transparent transition-all duration-200 text-sm"
               />
             </div>
 
@@ -67,7 +68,7 @@ function ContactForm() {
                 name="email"
                 placeholder="you@example.com"
                 required
-                className="w-full p-2.5 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-[rgb(33,150,243)] dark:focus:ring-[rgb(33,150,243)] focus:border-transparent transition-all duration-200 text-sm"
+                className="w-full p-2.5 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-[rgb(33,150,243)] focus:border-transparent transition-all duration-200 text-sm"
               />
               <ValidationError
                 prefix="Email"
@@ -91,7 +92,7 @@ function ContactForm() {
                 placeholder="Write your message here..."
                 required
                 rows="4"
-                className="w-full p-2.5 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-[rgb(33,150,243)] dark:focus:ring-[rgb(33,150,243)] focus:border-transparent resize-none transition-all duration-200 text-sm"
+                className="w-full p-2.5 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-[rgb(33,150,243)] focus:border-transparent resize-none transition-all duration-200 text-sm"
               />
               <ValidationError
                 prefix="Message"
