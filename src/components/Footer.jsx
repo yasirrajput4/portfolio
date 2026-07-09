@@ -19,10 +19,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer
-      className="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 py-10 mt-20 w-full border-t border-gray-200/80 dark:border-gray-800/50 transition-colors duration-300"
-      style={{ fontFamily: "Montserrat, sans-serif" }}
-    >
+    <footer className="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 py-10 mt-20 w-full border-t border-gray-200/80 dark:border-gray-800/50 transition-colors duration-300">
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center px-8 sm:px-10 gap-6 text-center">
         {/* Left: Random Quote (Integrated with text & author objects) */}
         <div className="flex-1 text-sm text-gray-400 dark:text-gray-500 text-center sm:text-left max-w-xs sm:max-w-none mx-auto sm:mx-0">
