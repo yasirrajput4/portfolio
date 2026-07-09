@@ -14,6 +14,8 @@ import {
   SiVite,
   SiReactrouter,
   SiMongodb,
+  SiElasticsearch,
+  SiFastapi,
 } from "react-icons/si";
 
 import mediprice from "../assets/mediprice.png";
@@ -25,7 +27,7 @@ const projects = [
   {
     title: "MediPrice",
     description:
-      "Compare and track medicine prices to help users find affordable healthcare options, with real-time search and price analytics.",
+      "Compare and track medicine prices to help users find affordable healthcare options, featuring real-time search and price analytics dashboards.",
     tech: [
       "React",
       "Vite",
@@ -41,31 +43,39 @@ const projects = [
     image: mediprice,
   },
   {
-    title: "NexusAI",
+    title: "Eco-Urbanist AI",
     description:
-      "AI-powered platform for smart, automated interactions, built with the Groq API running Llama 3.3 70B for fast responses.",
-    tech: ["React", "Vite", "TailwindCSS", "Groq API"],
-    github: "https://github.com/yasirrajput4/NexusAI",
+      "AI-driven tool for sustainable urban planning and eco-conscious city design, combining a Node API with a Python/FastAPI ML service.",
+    tech: [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Python",
+      "TensorFlow",
+      "Docker",
+      "FastAPI",
+    ],
+    github: "https://github.com/yasirrajput4/Eco-Urbanist-AI",
     live: "",
-    image: nexusai,
+    image: ecoUrbanistAi,
   },
   {
     title: "Blogify",
     description:
-      "A full-featured blogging platform with rich content management, authentication, and a WYSIWYG editing experience.",
+      "A full-featured blogging platform with rich content management, secure user authentication, and an intuitive WYSIWYG editing experience.",
     tech: ["React", "TailwindCSS", "Redux Toolkit", "React Router"],
     github: "https://github.com/yasirrajput4/Blogify",
     live: "",
     image: blogify,
   },
   {
-    title: "Eco-Urbanist AI",
+    title: "NexusAI",
     description:
-      "AI-driven tool for sustainable urban planning and eco-conscious city design, combining a Node API with a Python/FastAPI ML service.",
-    tech: ["React", "Node.js", "MongoDB", "Python", "TensorFlow", "Docker"],
-    github: "https://github.com/yasirrajput4/Eco-Urbanist-AI",
+      "AI-powered platform for smart, automated interactions, built with the Groq API running Llama 3.3 70B for lightning-fast responses.",
+    tech: ["React", "Vite", "TailwindCSS", "Groq API"],
+    github: "https://github.com/yasirrajput4/NexusAI",
     live: "",
-    image: ecoUrbanistAi,
+    image: nexusai,
   },
 ];
 
@@ -83,54 +93,59 @@ const techIcons = {
   Vite: <SiVite className="text-[#646CFF]" />,
   "React Router": <SiReactrouter className="text-[#CA4245]" />,
   MongoDB: <SiMongodb className="text-[#47A248]" />,
+  Elasticsearch: <SiElasticsearch className="text-[#005571]" />,
+  FastAPI: <SiFastapi className="text-[#009688]" />,
 };
 
 const Projects = () => {
   return (
     <section
       id="project"
-      className="bg-gray-100 dark:bg-gray-900 py-16 px-6 flex flex-col items-center transition-colors duration-300"
+      className="bg-gray-100 dark:bg-gray-900 py-20 px-4 sm:px-6 lg:px-8 flex flex-col items-center transition-colors duration-300"
       style={{ fontFamily: "Montserrat, sans-serif" }}
     >
-      <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-10 text-center">
+      <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-2 text-center">
         My Projects
       </h2>
+      <p className="text-gray-500 dark:text-gray-400 mb-12 text-center text-sm sm:text-base max-w-md">
+        Some of my recent full-stack applications and AI integrations.
+      </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-5xl">
+      {/* Optimized 2-Column Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl">
         {projects.map((project) => (
           <div
             key={project.title}
-            className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden w-full shadow-md border border-gray-200 dark:border-gray-700 transform transition duration-300 hover:scale-105 hover:shadow-xl flex flex-col"
+            className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden w-full shadow-md border border-gray-200/80 dark:border-gray-700/50 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col group"
           >
-            {/*
-              object-cover gives the clean, full-bleed look from the reference
-              screenshot. This only looks right if the source image is already
-              cropped to just the hero/banner section (landscape, ~1.9:1) -
-              see the "how to capture a good screenshot" notes.
-            */}
-            <div className="relative h-[150px] overflow-hidden">
+            {/* Image Wrap */}
+            <div className="relative h-[180px] sm:h-[220px] overflow-hidden bg-gray-200 dark:bg-gray-700">
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>
 
-            {/* Content */}
-            <div className="p-3 text-gray-800 dark:text-gray-100 flex flex-col flex-1">
-              <div className="flex justify-between items-start mb-2">
-                <h3 className="text-lg font-semibold">{project.title}</h3>
-                <div className="flex gap-2 text-lg">
+            {/* Content Body */}
+            <div className="p-5 flex flex-col flex-1">
+              <div className="flex justify-between items-center mb-3">
+                <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100">
+                  {project.title}
+                </h3>
+
+                {/* Action Links */}
+                <div className="flex gap-2.5">
                   {project.github && (
                     <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="border border-gray-300 dark:border-gray-600 p-1 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition"
-                      title="GitHub"
+                      className="text-gray-600 dark:text-gray-400 hover:text-[rgb(33,150,243)] dark:hover:text-[rgb(33,150,243)] border border-gray-200 dark:border-gray-700 p-2 rounded-lg bg-gray-50 dark:bg-gray-800 transition-colors"
+                      title="GitHub Repository"
                       aria-label={`View source code for ${project.title} on GitHub`}
                     >
-                      <LuGithub />
+                      <LuGithub size={18} />
                     </a>
                   )}
                   {project.live && (
@@ -138,28 +153,31 @@ const Projects = () => {
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="border border-gray-300 dark:border-gray-600 p-1 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition"
+                      className="text-gray-600 dark:text-gray-400 hover:text-[rgb(33,150,243)] dark:hover:text-[rgb(33,150,243)] border border-gray-200 dark:border-gray-700 p-2 rounded-lg bg-gray-50 dark:bg-gray-800 transition-colors"
                       title="Live Demo"
                       aria-label={`View live demo for ${project.title}`}
                     >
-                      <CiPlay1 />
+                      <CiPlay1 size={18} />
                     </a>
                   )}
                 </div>
               </div>
 
-              <p className="text-gray-600 dark:text-gray-300 text-sm leading-snug mb-3 flex-1">
+              <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed mb-5 flex-1">
                 {project.description}
               </p>
 
-              <div className="flex gap-2 flex-wrap">
+              {/* Tech Capsules */}
+              <div className="flex gap-2 flex-wrap mt-auto">
                 {project.tech.map((tech) => (
                   <span
                     key={`${project.title}-${tech}`}
-                    title={tech}
-                    className="bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-md p-1 flex items-center justify-center text-sm text-gray-700 dark:text-gray-200"
+                    className="flex items-center gap-1.5 bg-gray-50 dark:bg-gray-900/50 border border-gray-200 dark:border-gray-700/60 rounded-md px-2.5 py-1 text-xs font-medium text-gray-700 dark:text-gray-300 shadow-sm"
                   >
-                    {techIcons[tech] || tech}
+                    {techIcons[tech] && (
+                      <span className="text-sm">{techIcons[tech]}</span>
+                    )}
+                    <span>{tech}</span>
                   </span>
                 ))}
               </div>
