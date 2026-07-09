@@ -27,7 +27,7 @@ const projects = [
     description:
       "Compare and track medicine prices to help users find affordable healthcare options, with real-time search and price analytics.",
     tech: [
-      "React.js",
+      "React",
       "Vite",
       "TailwindCSS",
       "Node.js",
@@ -44,7 +44,7 @@ const projects = [
     title: "NexusAI",
     description:
       "AI-powered platform for smart, automated interactions, built with the Groq API running Llama 3.3 70B for fast responses.",
-    tech: ["React.js", "Vite", "TailwindCSS", "Groq API"],
+    tech: ["React", "Vite", "TailwindCSS", "Groq API"],
     github: "https://github.com/yasirrajput4/NexusAI",
     live: "",
     image: nexusai,
@@ -53,7 +53,7 @@ const projects = [
     title: "Blogify",
     description:
       "A full-featured blogging platform with rich content management, authentication, and a WYSIWYG editing experience.",
-    tech: ["React.js", "TailwindCSS", "Redux Toolkit", "React Router"],
+    tech: ["React", "TailwindCSS", "Redux Toolkit", "React Router"],
     github: "https://github.com/yasirrajput4/Blogify",
     live: "",
     image: blogify,
@@ -62,7 +62,7 @@ const projects = [
     title: "Eco-Urbanist AI",
     description:
       "AI-driven tool for sustainable urban planning and eco-conscious city design, combining a Node API with a Python/FastAPI ML service.",
-    tech: ["React.js", "Node.js", "MongoDB", "Python", "TensorFlow", "Docker"],
+    tech: ["React", "Node.js", "MongoDB", "Python", "TensorFlow", "Docker"],
     github: "https://github.com/yasirrajput4/Eco-Urbanist-AI",
     live: "",
     image: ecoUrbanistAi,
@@ -70,7 +70,7 @@ const projects = [
 ];
 
 const techIcons = {
-  "React.js": <FaReact className="text-[#61dafb]" />,
+  React: <FaReact className="text-[#61dafb]" />,
   JavaScript: <SiJavascript className="text-yellow-500" />,
   "Redux Toolkit": <SiRedux className="text-[#764abc]" />,
   TailwindCSS: <SiTailwindcss className="text-[#38bdf8]" />,

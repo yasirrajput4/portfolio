@@ -2,7 +2,7 @@ import React from "react";
 
 const SKILLS = [
   // Frontend
-  "React.js",
+  "React",
   "Vite",
   "Redux Toolkit",
   "Zustand",

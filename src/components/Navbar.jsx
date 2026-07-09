@@ -8,7 +8,7 @@ const NAV_LINKS = [
   { href: "#contact", label: "Contact" },
 ];
 
-const ThemeToggleButton = ({ className = "" }) => (
+const ThemeToggleButton = ({ theme, toggleTheme, className = "" }) => (
   <button
     type="button"
     onClick={toggleTheme}
@@ -20,6 +20,7 @@ const ThemeToggleButton = ({ className = "" }) => (
     {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
   </button>
 );
+
 const Navbar = ({ theme, toggleTheme }) => {
   const [isOpen, setIsOpen] = useState(false);
   const closeMenu = () => setIsOpen(false);
@@ -60,12 +61,14 @@ const Navbar = ({ theme, toggleTheme }) => {
             </span>
             Open to New Opportunities
           </div>
-          <ThemeToggleButton />
+          {/* Fixed: Passed theme and toggleTheme props */}
+          <ThemeToggleButton theme={theme} toggleTheme={toggleTheme} />
         </div>
 
         {/* Mobile: theme toggle + hamburger */}
         <div className="flex items-center gap-2 md:hidden">
-          <ThemeToggleButton />
+          {/* Fixed: Passed theme and toggleTheme props */}
+          <ThemeToggleButton theme={theme} toggleTheme={toggleTheme} />
           <button
             type="button"
             onClick={() => setIsOpen((prev) => !prev)}
