@@ -1,33 +1,96 @@
 export const quotes = [
-  "Failure is simply the opportunity to begin again, this time more intelligently. – Henry Ford",
-  "Don't fear failure. Fear being in the exact same place next year as you are today. – Unknown",
-  "Failure is the condiment that gives success its flavor. – Truman Capote",
+  {
+    text: "Failure is simply the opportunity to begin again, this time more intelligently.",
+    author: "Henry Ford",
+  },
+  {
+    text: "Don't fear failure. Fear being in the exact same place next year as you are today.",
+    author: "Unknown",
+  },
+  {
+    text: "Failure is the condiment that gives success its flavor.",
+    author: "Truman Capote",
+  },
 
-  "Live as if you were to die tomorrow. Learn as if you were to live forever. – Mahatma Gandhi",
-  "An investment in knowledge pays the best interest. – Benjamin Franklin",
-  "The beautiful thing about learning is nobody can take it away from you. – B.B. King",
+  {
+    text: "Live as if you were to die tomorrow. Learn as if you were to live forever.",
+    author: "Mahatma Gandhi",
+  },
+  {
+    text: "An investment in knowledge pays the best interest.",
+    author: "Benjamin Franklin",
+  },
+  {
+    text: "The beautiful thing about learning is nobody can take it away from you.",
+    author: "B.B. King",
+  },
 
-  "Success doesn't come from what you do occasionally, it comes from what you do consistently. – Marie Forleo",
-  "Small daily improvements over time lead to stunning results. – Robin Sharma",
-  "Consistency is what transforms average into excellence. – Unknown",
+  {
+    text: "Success doesn't come from what you do occasionally, it comes from what you do consistently.",
+    author: "Marie Forleo",
+  },
+  {
+    text: "Small daily improvements over time lead to stunning results.",
+    author: "Robin Sharma",
+  },
+  {
+    text: "Consistency is what transforms average into excellence.",
+    author: "Unknown",
+  },
 
-  "The successful warrior is the average man, with laser-like focus. – Bruce Lee",
-  "Focus on being productive instead of busy. – Tim Ferriss",
-  "You can't depend on your eyes when your imagination is out of focus. – Mark Twain",
+  {
+    text: "The successful warrior is the average man, with laser-like focus.",
+    author: "Bruce Lee",
+  },
+  { text: "Focus on being productive instead of busy.", author: "Tim Ferriss" },
+  {
+    text: "You can't depend on your eyes when your imagination is out of focus.",
+    author: "Mark Twain",
+  },
 
-  "Grit is passion and perseverance for very long-term goals. – Angela Duckworth",
-  "Our greatest glory is not in never falling, but in rising every time we fall. – Confucius",
-  "Grit is living life like it's a marathon, not a sprint. – Angela Duckworth",
+  {
+    text: "Grit is passion and perseverance for very long-term goals.",
+    author: "Angela Duckworth",
+  },
+  {
+    text: "Our greatest glory is not in never falling, but in rising every time we fall.",
+    author: "Confucius",
+  },
+  {
+    text: "Grit is living life like it's a marathon, not a sprint.",
+    author: "Angela Duckworth",
+  },
 
-  "Determination gives you the resolve to keep going in spite of the roadblocks that lay before you. – Denis Waitley",
-  "It always seems impossible until it's done. – Nelson Mandela",
-  "Where there's a will, there's a way. – Unknown",
+  {
+    text: "Determination gives you the resolve to keep going in spite of the roadblocks that lay before you.",
+    author: "Denis Waitley",
+  },
+  {
+    text: "It always seems impossible until it's done.",
+    author: "Nelson Mandela",
+  },
+  { text: "Where there's a will, there's a way.", author: "Unknown" },
 
-  "Success is not final, failure is not fatal: It is the courage to continue that counts. – Winston Churchill",
-  "Success usually comes to those who are too busy to be looking for it. – Henry David Thoreau",
-  "Don't aim for success if you want it; just do what you love. – Viktor Frankl",
+  {
+    text: "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+    author: "Winston Churchill",
+  },
+  {
+    text: "Success usually comes to those who are too busy to be looking for it.",
+    author: "Henry David Thoreau",
+  },
+  {
+    text: "Don't aim for success if you want it; just do what you love.",
+    author: "Viktor Frankl",
+  },
 
-  "There are no secrets to success. It is the result of preparation, hard work, and learning from failure. – Colin Powell",
-  "Dreams don't work unless you do. – John C. Maxwell",
-  "Hard work beats talent when talent doesn't work hard. – Tim Notke",
+  {
+    text: "There are no secrets to success. It is the result of preparation, hard work, and learning from failure.",
+    author: "Colin Powell",
+  },
+  { text: "Dreams don't work unless you do.", author: "John C. Maxwell" },
+  {
+    text: "Hard work beats talent when talent doesn't work hard.",
+    author: "Tim Notke",
+  },
 ];
