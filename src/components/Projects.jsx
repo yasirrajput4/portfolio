@@ -100,7 +100,7 @@ const techIcons = {
 const Projects = () => {
   return (
     <section
-      id="project"
+      id="projects"
       className="bg-gray-100 dark:bg-gray-900 py-20 px-4 sm:px-6 lg:px-8 flex flex-col items-center transition-colors duration-300"
       style={{ fontFamily: "Montserrat, sans-serif" }}
     >
