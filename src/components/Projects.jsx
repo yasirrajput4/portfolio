@@ -111,14 +111,14 @@ const Projects = () => {
         Some of my recent full-stack applications and AI integrations.
       </p>
 
-      {/* Optimized 2-Column Grid */}
+      {/* Balanced 2-Column Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl">
         {projects.map((project) => (
           <div
             key={project.title}
             className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden w-full shadow-md border border-gray-200/80 dark:border-gray-700/50 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col group"
           >
-            {/* Image Wrap */}
+            {/* Image Box */}
             <div className="relative h-[180px] sm:h-[220px] overflow-hidden bg-gray-200 dark:bg-gray-700">
               <img
                 src={project.image}
@@ -127,14 +127,14 @@ const Projects = () => {
               />
             </div>
 
-            {/* Content Body */}
+            {/* Content Box */}
             <div className="p-5 flex flex-col flex-1">
               <div className="flex justify-between items-center mb-3">
                 <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100">
                   {project.title}
                 </h3>
 
-                {/* Action Links */}
+                {/* Links */}
                 <div className="flex gap-2.5">
                   {project.github && (
                     <a
@@ -163,11 +163,12 @@ const Projects = () => {
                 </div>
               </div>
 
-              <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed mb-5 flex-1">
+              {/* Fixed height paragraph space with line-clamping */}
+              <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed mb-5 md:min-h-[4.5rem] lg:min-h-[4rem] line-clamp-3">
                 {project.description}
               </p>
 
-              {/* Tech Capsules */}
+              {/* Tech Badges container pushed to bottom via mt-auto */}
               <div className="flex gap-2 flex-wrap mt-auto">
                 {project.tech.map((tech) => (
                   <span
