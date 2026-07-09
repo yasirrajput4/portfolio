@@ -41,14 +41,14 @@ const Hero = () => {
           Let's Talk
         </a>
 
-        <a
+        {/* <a
           href="https://drive.google.com/drive/folders/1Iq1M4ekPdG9Nq0OQ3eODeMP7mMBED55p?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center gap-2 px-6 py-2.5 rounded-md border border-[rgb(33,150,243)] text-[rgb(33,150,243)] font-medium hover:bg-[rgb(33,150,243)] hover:text-white dark:hover:text-white transition-all duration-300 cursor-pointer shadow-sm"
         >
           My Resume
-        </a>
+        </a> */}
       </div>
     </section>
   );
