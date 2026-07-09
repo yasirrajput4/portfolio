@@ -1,6 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
 @import "tailwindcss";
 
+/* Tailwind v4 Theme Engine Customization */
+@theme {
+  /* Mapping Montserrat globally so you can delete manual style={{ fontFamily }} from components */
+  --font-sans: "Montserrat", sans-serif;
+}
+
 /* Enables class-based dark mode (toggle via .dark on <html>) in Tailwind v4 */
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -9,11 +15,14 @@ html {
 }
 
 body {
+  /* Added border-color to transition for seamless dark mode component switches */
   transition:
     background-color 0.3s ease,
-    color 0.3s ease;
+    color 0.3s ease,
+    border-color 0.3s ease;
 }
 
+/* Accessibility reset for system users who prefer no/reduced animations */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-delay: -1ms !important;
