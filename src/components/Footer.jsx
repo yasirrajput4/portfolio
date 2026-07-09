@@ -1,39 +1,40 @@
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import { useState, useEffect } from "react";
-import { quotes } from "../utils/constants"; // your quotes file
+import { quotes } from "../utils/constants";
 
 const Footer = () => {
   const [quote, setQuote] = useState("");
 
   useEffect(() => {
-    // Check to prevent errors if quotes array is empty or missing
     if (!quotes || quotes.length === 0) return;
 
     const pickQuote = () => {
       setQuote(quotes[Math.floor(Math.random() * quotes.length)]);
     };
 
-    pickQuote(); // initial quote
-    const interval = setInterval(pickQuote, 10000); // every 10 sec
+    pickQuote();
+    const interval = setInterval(pickQuote, 10000);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <footer
-      className="bg-gray-100 text-black py-8 mt-20 w-full border-t border-gray-300"
+      className="bg-gray-100 dark:bg-gray-900 text-black dark:text-gray-100 py-8 mt-20 w-full border-t border-gray-300 dark:border-gray-800 transition-colors duration-300"
       style={{ fontFamily: "Montserrat, sans-serif" }}
     >
       <div className="flex flex-col sm:flex-row justify-between items-center sm:items-center px-8 sm:px-10 gap-6 text-center">
         {/* Left: Random Quote */}
-        <div className="flex-1 text-sm text-gray-400 italic">
+        <div className="flex-1 text-sm text-gray-400 dark:text-gray-500 italic">
           {quote && `"${quote}"`}
         </div>
 
         {/* Center: Name + Nav + Social Icons */}
         <div className="flex-1 flex flex-col items-center gap-4">
-          <p className="text-3xl sm:text-4xl text-gray-700">Yasir</p>
+          <p className="text-3xl sm:text-4xl text-gray-700 dark:text-gray-200">
+            Yasir
+          </p>
 
-          <nav className="flex flex-wrap justify-center gap-4 sm:gap-6 text-gray-500 text-base sm:text-lg">
+          <nav className="flex flex-wrap justify-center gap-4 sm:gap-6 text-gray-500 dark:text-gray-400 text-base sm:text-lg">
             <a href="#home" className="hover:text-[rgb(33,150,243)]">
               Home
             </a>
@@ -77,12 +78,10 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Right: Optional extra space */}
         <div className="flex-1"></div>
       </div>
 
-      {/* Bottom: Copyright */}
-      <p className="text-gray-500 text-sm text-center mt-6 px-4">
+      <p className="text-gray-500 dark:text-gray-500 text-sm text-center mt-6 px-4">
         &copy; {new Date().getFullYear()} Yasir Rajput. All rights reserved.
       </p>
     </footer>

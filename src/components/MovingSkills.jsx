@@ -4,68 +4,64 @@ import {
   SiRedux,
   SiJavascript,
   SiTailwindcss,
-  SiNextdotjs,
   SiHtml5,
-  SiFirebase,
-  SiMysql,
-  SiGit,
-  SiGithub,
-  SiFigma,
+  SiVite,
   SiNodedotjs,
   SiExpress,
   SiMongodb,
+  SiPostgresql,
+  SiRedis,
+  SiPython,
+  SiDocker,
+  SiGit,
+  SiGithub,
   SiPostman,
+  SiTensorflow,
 } from "react-icons/si";
 import { DiCss3 } from "react-icons/di";
 
 const skillsWithIcons = [
   { name: "React.js", icon: <SiReact /> },
+  { name: "Vite", icon: <SiVite /> },
   { name: "Redux", icon: <SiRedux /> },
   { name: "JavaScript", icon: <SiJavascript /> },
-
-  // Styling
   { name: "Tailwind CSS", icon: <SiTailwindcss /> },
   { name: "HTML5", icon: <SiHtml5 /> },
   { name: "CSS3", icon: <DiCss3 /> },
 
-  // Frameworks
-  { name: "Next.js", icon: <SiNextdotjs /> },
-
-  // Backend (MERN)
   { name: "Node.js", icon: <SiNodedotjs /> },
   { name: "Express.js", icon: <SiExpress /> },
+  { name: "Python", icon: <SiPython /> },
+
   { name: "MongoDB", icon: <SiMongodb /> },
+  { name: "PostgreSQL", icon: <SiPostgresql /> },
+  { name: "Redis", icon: <SiRedis /> },
 
-  // Database & BaaS
-  { name: "SQL", icon: <SiMysql /> },
-  { name: "Firebase", icon: <SiFirebase /> },
+  { name: "TensorFlow", icon: <SiTensorflow /> },
 
-  // Tools
+  { name: "Docker", icon: <SiDocker /> },
   { name: "Postman", icon: <SiPostman /> },
   { name: "Git", icon: <SiGit /> },
   { name: "GitHub", icon: <SiGithub /> },
-  { name: "Figma", icon: <SiFigma /> },
 ];
 
 const MovingSkills = () => {
   return (
     <div className="w-full overflow-hidden mb-6 relative flex items-center">
       <div className="flex gap-3 sm:gap-6 whitespace-nowrap animate-marquee">
-        {/* First loop batch */}
         {skillsWithIcons.map((skill) => (
           <span
             key={`${skill.name}-first`}
-            className="text-[rgb(33,150,243)] px-2 sm:px-4 py-1 sm:py-2 rounded-md text-xs sm:text-sm font-medium bg-white flex items-center gap-1 sm:gap-2 transition"
+            className="text-[rgb(33,150,243)] px-2 sm:px-4 py-1 sm:py-2 rounded-md text-xs sm:text-sm font-medium bg-white dark:bg-gray-800 flex items-center gap-1 sm:gap-2 transition-colors duration-300"
           >
             {React.cloneElement(skill.icon, { size: 14 })}
             {skill.name}
           </span>
         ))}
-        {/* Second loop batch for seamless sliding */}
         {skillsWithIcons.map((skill) => (
           <span
             key={`${skill.name}-second`}
-            className="text-[rgb(33,150,243)] px-2 sm:px-4 py-1 sm:py-2 rounded-md text-xs sm:text-sm font-medium bg-white flex items-center gap-1 sm:gap-2 transition"
+            className="text-[rgb(33,150,243)] px-2 sm:px-4 py-1 sm:py-2 rounded-md text-xs sm:text-sm font-medium bg-white dark:bg-gray-800 flex items-center gap-1 sm:gap-2 transition-colors duration-300"
           >
             {React.cloneElement(skill.icon, { size: 14 })}
             {skill.name}

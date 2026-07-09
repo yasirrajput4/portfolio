@@ -1,6 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
 @import "tailwindcss";
 
+/* Enables class-based dark mode (toggle via .dark on <html>) in Tailwind v4 */
+@custom-variant dark (&:where(.dark, .dark *));
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-delay: -1ms !important;
