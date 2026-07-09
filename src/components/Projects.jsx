@@ -96,11 +96,17 @@ const Projects = () => {
         My Projects
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-center">
+      {/*
+        Fix: removed fixed card width (was w-[290px]) which didn't fill the
+        grid column on wider screens, causing left-aligned gaps.
+        Cards now use w-full so they stretch to match their grid column,
+        and the whole grid is capped with max-w-5xl so it doesn't get too wide.
+      */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-5xl">
         {projects.map((project) => (
           <div
             key={project.title}
-            className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden w-[290px] shadow-md border border-gray-200 dark:border-gray-700 transform transition duration-300 hover:scale-105 hover:shadow-xl"
+            className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden w-full shadow-md border border-gray-200 dark:border-gray-700 transform transition duration-300 hover:scale-105 hover:shadow-xl flex flex-col"
           >
             {/* Screenshot */}
             <div className="relative">
@@ -112,7 +118,7 @@ const Projects = () => {
             </div>
 
             {/* Content */}
-            <div className="p-3 text-gray-800 dark:text-gray-100">
+            <div className="p-3 text-gray-800 dark:text-gray-100 flex flex-col flex-1">
               <div className="flex justify-between items-start mb-2">
                 <h3 className="text-lg font-semibold">{project.title}</h3>
                 <div className="flex gap-2 text-lg">
@@ -143,7 +149,7 @@ const Projects = () => {
                 </div>
               </div>
 
-              <p className="text-gray-600 dark:text-gray-300 text-sm leading-snug mb-3">
+              <p className="text-gray-600 dark:text-gray-300 text-sm leading-snug mb-3 flex-1">
                 {project.description}
               </p>
 
