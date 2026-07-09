@@ -15,12 +15,11 @@ import {
   SiReactrouter,
   SiMongodb,
 } from "react-icons/si";
-import {
-  Stethoscope,
-  Bot,
-  PenLine,
-  Building2,
-} from "lucide-react";
+
+import mediprice from "../assets/mediprice.png";
+import nexusai from "../assets/nexusai.png";
+import blogify from "../assets/blogify.png";
+import ecoUrbanistAi from "../assets/eco-urbanist-ai.png";
 
 const projects = [
   {
@@ -39,8 +38,7 @@ const projects = [
     ],
     github: "https://github.com/yasirrajput4/MediPrice",
     live: "",
-    icon: <Stethoscope size={40} />,
-    gradient: "from-teal-500 to-cyan-600",
+    image: mediprice,
   },
   {
     title: "NexusAI",
@@ -49,8 +47,7 @@ const projects = [
     tech: ["React.js", "Vite", "TailwindCSS", "Groq API"],
     github: "https://github.com/yasirrajput4/NexusAI",
     live: "",
-    icon: <Bot size={40} />,
-    gradient: "from-violet-500 to-purple-600",
+    image: nexusai,
   },
   {
     title: "Blogify",
@@ -59,25 +56,16 @@ const projects = [
     tech: ["React.js", "TailwindCSS", "Redux Toolkit", "React Router"],
     github: "https://github.com/yasirrajput4/Blogify",
     live: "",
-    icon: <PenLine size={40} />,
-    gradient: "from-orange-500 to-amber-600",
+    image: blogify,
   },
   {
     title: "Eco-Urbanist AI",
     description:
       "AI-driven tool for sustainable urban planning and eco-conscious city design, combining a Node API with a Python/FastAPI ML service.",
-    tech: [
-      "React.js",
-      "Node.js",
-      "MongoDB",
-      "Python",
-      "TensorFlow",
-      "Docker",
-    ],
+    tech: ["React.js", "Node.js", "MongoDB", "Python", "TensorFlow", "Docker"],
     github: "https://github.com/yasirrajput4/Eco-Urbanist-AI",
     live: "",
-    icon: <Building2 size={40} />,
-    gradient: "from-emerald-500 to-green-600",
+    image: ecoUrbanistAi,
   },
 ];
 
@@ -114,11 +102,13 @@ const Projects = () => {
             key={project.title}
             className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden w-[290px] shadow-md border border-gray-200 dark:border-gray-700 transform transition duration-300 hover:scale-105 hover:shadow-xl"
           >
-            {/* Gradient banner with icon, in place of a screenshot */}
-            <div
-              className={`h-[130px] w-full bg-gradient-to-br ${project.gradient} flex items-center justify-center text-white`}
-            >
-              {project.icon}
+            {/* Screenshot */}
+            <div className="relative">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-[150px] object-cover object-top"
+              />
             </div>
 
             {/* Content */}
