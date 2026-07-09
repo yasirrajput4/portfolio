@@ -11,13 +11,23 @@ export default function App() {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <div className="bg-gray-100 dark:bg-gray-900 font-sans transition-colors duration-300">
+    /* Added min-h-screen to secure background and overflow-x-hidden to prevent layout breaking on scroll */
+    <div className="bg-gray-100 dark:bg-gray-900 font-sans min-h-screen overflow-x-hidden relative transition-colors duration-300">
+      {/* Top Header Navigation */}
       <Navbar theme={theme} toggleTheme={toggleTheme} />
-      <Hero />
+
+      {/* Floating Global Micro-interactions */}
       <Socials />
-      <About />
-      <Projects />
-      <ContactForm />
+
+      {/* Semantic Main Core Content Area */}
+      <main>
+        <Hero />
+        <About />
+        <Projects />
+        <ContactForm />
+      </main>
+
+      {/* Bottom Footer Area */}
       <Footer />
     </div>
   );
