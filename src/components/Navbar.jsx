@@ -30,17 +30,18 @@ const Navbar = ({ theme, toggleTheme }) => {
       className="sticky top-0 z-50 bg-gray-100/90 dark:bg-gray-900/90 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 transition-colors duration-300"
       style={{ fontFamily: "Montserrat, sans-serif" }}
     >
-      <div className="flex items-center justify-between px-6 sm:px-10 py-4">
+      {/* relative wrapper lets the nav center itself independent of the two side elements */}
+      <div className="relative flex items-center justify-between px-6 sm:px-10 py-4">
         {/* Logo */}
         <a
           href="#home"
-          className="text-lg font-bold text-gray-800 dark:text-gray-100 tracking-tight"
+          className="text-lg font-bold text-gray-800 dark:text-gray-100 tracking-tight z-10"
         >
           Yasir<span className="text-[rgb(33,150,243)]">.</span>
         </a>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex gap-8 text-gray-500 dark:text-gray-400 text-base">
+        {/* Desktop Nav - absolutely centered on the header, not dependent on sibling widths */}
+        <nav className="hidden md:flex gap-8 text-gray-500 dark:text-gray-400 text-base absolute left-1/2 -translate-x-1/2">
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
@@ -53,7 +54,7 @@ const Navbar = ({ theme, toggleTheme }) => {
         </nav>
 
         {/* Right side: availability badge + theme toggle - desktop */}
-        <div className="hidden md:flex items-center gap-3">
+        <div className="hidden md:flex items-center gap-3 z-10">
           <div className="flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 bg-gray-200 dark:bg-gray-800 border border-gray-300 dark:border-gray-700">
             <span className="relative flex h-3 w-3">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
@@ -61,13 +62,11 @@ const Navbar = ({ theme, toggleTheme }) => {
             </span>
             Open to New Opportunities
           </div>
-          {/* Fixed: Passed theme and toggleTheme props */}
           <ThemeToggleButton theme={theme} toggleTheme={toggleTheme} />
         </div>
 
         {/* Mobile: theme toggle + hamburger */}
-        <div className="flex items-center gap-2 md:hidden">
-          {/* Fixed: Passed theme and toggleTheme props */}
+        <div className="flex items-center gap-2 md:hidden z-10">
           <ThemeToggleButton theme={theme} toggleTheme={toggleTheme} />
           <button
             type="button"
