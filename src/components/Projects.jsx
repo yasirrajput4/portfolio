@@ -65,7 +65,7 @@ const projects = [
       "A full-featured blogging platform with rich content management, secure user authentication, and an intuitive WYSIWYG editing experience.",
     tech: ["React", "TailwindCSS", "Redux Toolkit", "React Router"],
     github: "https://github.com/yasirrajput4/Blogify",
-    live: "",
+    live: "https://blogify-eosin-zeta.vercel.app",
     image: blogify,
   },
   {
@@ -74,7 +74,7 @@ const projects = [
       "AI-powered platform for smart, automated interactions, built with the Groq API running Llama 3.3 70B for lightning-fast responses.",
     tech: ["React", "Vite", "TailwindCSS", "Groq API"],
     github: "https://github.com/yasirrajput4/NexusAI",
-    live: "",
+    live: "https://nexus-ai-five-wine.vercel.app",
     image: nexusai,
   },
 ];
