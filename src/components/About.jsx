@@ -81,7 +81,7 @@ const About = () => {
                 {group.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="border border-[rgb(33,150,243)] text-[rgb(33,150,243)] px-3 py-1 rounded-md text-xs sm:text-sm font-medium hover:bg-[rgb(33,150,243)] hover:text-white transition-all duration-200 cursor-pointer"
+                    className="border border-[rgb(33,150,243)] text-[rgb(33,150,243)] px-3 py-1 rounded-md text-xs sm:text-sm font-medium hover:bg-[rgb(33,150,243)] hover:text-white transition-colors duration-200 cursor-pointer"
                   >
                     {skill}
                   </span>

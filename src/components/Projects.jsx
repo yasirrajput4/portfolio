@@ -116,7 +116,7 @@ const Projects = () => {
         {projects.map((project) => (
           <div
             key={project.title}
-            className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden w-full shadow-md border border-gray-200/80 dark:border-gray-700/50 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col group"
+            className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden w-full shadow-md border border-gray-200/80 dark:border-gray-700/50 transform transition-transform transition-shadow duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col group"
           >
             {/* Image Box */}
             <div className="relative h-[180px] sm:h-[220px] overflow-hidden bg-gray-200 dark:bg-gray-700">

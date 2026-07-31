@@ -9,7 +9,7 @@ const Socials = () => {
         href="https://www.linkedin.com/in/yasirrajput"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-gray-500 dark:text-gray-400 hover:text-[rgb(33,150,243)] dark:hover:text-[rgb(33,150,243)] hover:scale-115 transition-all duration-200 inline-block p-1"
+        className="text-gray-500 dark:text-gray-400 hover:text-[rgb(33,150,243)] dark:hover:text-[rgb(33,150,243)] hover:scale-110 transition-colors transition-transform duration-200 inline-block p-1"
         aria-label="Visit Yasir's LinkedIn profile"
       >
         <Linkedin size={22} />
@@ -19,7 +19,7 @@ const Socials = () => {
         href="https://github.com/yasirrajput4"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-gray-500 dark:text-gray-400 hover:text-[rgb(33,150,243)] dark:hover:text-[rgb(33,150,243)] hover:scale-115 transition-all duration-200 inline-block p-1"
+        className="text-gray-500 dark:text-gray-400 hover:text-[rgb(33,150,243)] dark:hover:text-[rgb(33,150,243)] hover:scale-110 transition-colors transition-transform duration-200 inline-block p-1"
         aria-label="Visit Yasir's GitHub profile"
       >
         <Github size={22} />
@@ -28,7 +28,7 @@ const Socials = () => {
       {/* Removed target="_blank" to prevent opening annoying blank browser tabs */}
       <a
         href="mailto:rajputyasir2005@gmail.com"
-        className="text-gray-500 dark:text-gray-400 hover:text-[rgb(33,150,243)] dark:hover:text-[rgb(33,150,243)] hover:scale-115 transition-all duration-200 inline-block p-1"
+        className="text-gray-500 dark:text-gray-400 hover:text-[rgb(33,150,243)] dark:hover:text-[rgb(33,150,243)] hover:scale-110 transition-colors transition-transform duration-200 inline-block p-1"
         aria-label="Send an email to Yasir"
       >
         <Mail size={22} />
@@ -38,10 +38,10 @@ const Socials = () => {
         href="https://wa.me/919898194502"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-gray-500 dark:text-gray-400 hover:text-[#25D366] dark:hover:text-[#25D366] hover:scale-115 transition-all duration-200 inline-block p-1"
+        className="text-gray-500 dark:text-gray-400 hover:text-[#25D366] dark:hover:text-[#25D366] hover:scale-110 transition-colors transition-transform duration-200 inline-block p-1"
         aria-label="Chat with Yasir on WhatsApp"
       >
-        <BsWhatsapp size={22} />
+        <BsWhatsapp size2={22} />
       </a>
     </div>
   );
