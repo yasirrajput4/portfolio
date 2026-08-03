@@ -163,7 +163,6 @@ const Projects = () => {
                 </div>
               </div>
 
-              {/* Fixed height paragraph space with line-clamping */}
               <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed mb-5 md:min-h-[4.5rem] lg:min-h-[4rem] line-clamp-3">
                 {project.description}
               </p>
