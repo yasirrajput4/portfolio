@@ -50,7 +50,7 @@ const Navbar = ({ theme, toggleTheme }) => {
               className="relative py-1 transition-colors duration-200 hover:text-[rgb(33,150,243)] group"
             >
               {link.label}
-              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[rgb(33,150,243)] transition-[width] duration-300 group-hover:w-full"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[rgb(33,150,243)] transition-[width] duration-300 group-hover:w-full"></span>
             </a>
           ))}
         </nav>

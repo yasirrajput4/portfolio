@@ -116,10 +116,10 @@ const Projects = () => {
         {projects.map((project) => (
           <div
             key={project.title}
-            className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden w-full shadow-md border border-gray-200/80 dark:border-gray-700/50 transform transition-transform transition-shadow duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col group"
+            className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden w-full shadow-md border border-gray-200/80 dark:border-gray-700/50 transform transition-[transform,box-shadow] duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col group"
           >
             {/* Image Box */}
-            <div className="relative h-[180px] sm:h-[220px] overflow-hidden bg-gray-200 dark:bg-gray-700">
+            <div className="relative h-45 sm:h-55 overflow-hidden bg-gray-200 dark:bg-gray-700">
               <img
                 src={project.image}
                 alt={project.title}
@@ -163,7 +163,7 @@ const Projects = () => {
                 </div>
               </div>
 
-              <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed mb-5 md:min-h-[4.5rem] lg:min-h-[4rem] line-clamp-3">
+              <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed mb-5 md:min-h-18 lg:min-h-16 line-clamp-3">
                 {project.description}
               </p>
 

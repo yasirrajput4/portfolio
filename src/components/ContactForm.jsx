@@ -104,7 +104,7 @@ function ContactForm() {
             <button
               type="submit"
               disabled={state.submitting}
-              className="w-full py-3 bg-[rgb(33,150,243)] hover:bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-colors transition-shadow duration-200 text-sm cursor-pointer flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+              className="w-full py-3 bg-[rgb(33,150,243)] hover:bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-[background-color,box-shadow] duration-200 text-sm cursor-pointer flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
             >
               {state.submitting ? (
                 "Sending..."
