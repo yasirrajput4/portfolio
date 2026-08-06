@@ -46,7 +46,7 @@ const Hero = () => {
           target="_blank"
           rel="noopener noreferrer"
           download="Yasir_Rajput_Resume.pdf"
-          className="flex items-center justify-center gap-2 px-6 py-2.5 rounded-md border border-[rgb(33,150,243)] text-[rgb(33,150,243)] font-medium hover:bg-[rgb(33,150,243)] hover:text-white dark:hover:text-white transition-all duration-300 cursor-pointer shadow-sm"
+          className="flex items-center justify-center gap-2 px-6 py-2.5 rounded-md border border-[rgb(33,150,243)] text-[rgb(33,150,243)] font-medium hover:bg-[rgb(33,150,243)] hover:text-white dark:hover:text-white transition-[background-color,color] duration-300 cursor-pointer shadow-sm"
         >
           My Resume
         </a>
