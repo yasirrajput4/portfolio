@@ -1,5 +1,3 @@
-import React from "react";
-
 const SKILLS_DATA = [
   {
     category: "Frontend",

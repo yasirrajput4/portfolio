@@ -1,4 +1,3 @@
-import React from "react";
 import { CiPlay1 } from "react-icons/ci";
 import { LuGithub } from "react-icons/lu";
 import { FaReact, FaNodeJs } from "react-icons/fa";

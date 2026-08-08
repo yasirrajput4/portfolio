@@ -1,4 +1,3 @@
-import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import { FiSend, FiCheckCircle } from "react-icons/fi";
 
