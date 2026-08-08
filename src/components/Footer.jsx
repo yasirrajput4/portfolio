@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { quotes } from "../utils/constants";
 
 const Footer = () => {
-  // Changed initial state to null because quote is now an object
   const [quote, setQuote] = useState(null);
 
   useEffect(() => {

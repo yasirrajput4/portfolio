@@ -166,7 +166,6 @@ const Projects = () => {
                 {project.description}
               </p>
 
-              {/* Tech Badges container pushed to bottom via mt-auto */}
               <div className="flex gap-2 flex-wrap mt-auto">
                 {project.tech.map((tech) => (
                   <span

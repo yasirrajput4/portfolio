@@ -9,7 +9,6 @@ function ContactForm() {
       id="contact"
       className="bg-gray-100 dark:bg-gray-900 py-20 px-4 sm:px-6 lg:px-8 flex flex-col items-center transition-colors duration-300"
     >
-      {/* Section Heading remains fixed */}
       <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-2 text-center">
         Get in Touch
       </h2>
@@ -19,7 +18,6 @@ function ContactForm() {
 
       <div className="w-full max-w-xl bg-white dark:bg-gray-800 rounded-xl shadow-md border border-gray-200/80 dark:border-gray-700/50 p-6 sm:p-8 transition-colors duration-300">
         {state.succeeded ? (
-          /* Elegant Success Message Inside the Same Container */
           <div className="flex flex-col items-center justify-center py-10 text-center space-y-4 animate-fade-in">
             <FiCheckCircle className="text-5xl text-green-500 dark:text-green-400 animate-[pulse_2s_cubic-bezier(0.16,1,0.3,1)_infinite]" />
             <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100">

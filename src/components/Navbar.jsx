@@ -41,7 +41,7 @@ const Navbar = ({ theme, toggleTheme }) => {
           </a>
         </div>
 
-        {/* CENTER: Desktop Nav Links (Perfectly centered now) */}
+        {/* CENTER: Desktop Nav Links */}
         <nav className="hidden md:flex items-center gap-8 text-gray-500 dark:text-gray-400 text-base font-medium shrink-0">
           {NAV_LINKS.map((link) => (
             <a
