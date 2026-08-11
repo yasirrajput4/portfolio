@@ -1,10 +1,12 @@
-import About from "./components/About";
-import ContactForm from "./components/ContactForm";
-import Footer from "./components/Footer";
-import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
-import Projects from "./components/Projects";
-import Socials from "./components/Socials";
+import {
+  About,
+  ContactForm,
+  Footer,
+  Hero,
+  Navbar,
+  Projects,
+  Socials,
+} from "./components";
 import { useTheme } from "./hooks/useTheme";
 
 export default function App() {
