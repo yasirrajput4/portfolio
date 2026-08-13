@@ -17,10 +17,10 @@ import {
   SiFastapi,
 } from "react-icons/si";
 
-import mediprice from "../assets/mediprice.png";
-import nexusai from "../assets/nexusai.png";
-import blogify from "../assets/blogify.png";
-import ecoUrbanistAi from "../assets/eco-urbanist-ai.png";
+import mediprice from "../assets/mediprice.webp";
+import nexusai from "../assets/nexusai.webp";
+import blogify from "../assets/blogify.webp";
+import ecoUrbanistAi from "../assets/eco-urbanist-ai.webp";
 
 const projects = [
   {
@@ -112,7 +112,7 @@ const Projects = () => {
 
       {/* Balanced 2-Column Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl">
-        {projects.map((project) => (
+        {projects.map((project, index) => (
           <div
             key={project.title}
             className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden w-full shadow-md border border-gray-200/80 dark:border-gray-700/50 transform transition-[transform,box-shadow] duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col group"
@@ -121,7 +121,11 @@ const Projects = () => {
             <div className="relative h-45 sm:h-55 overflow-hidden bg-gray-200 dark:bg-gray-700">
               <img
                 src={project.image}
-                alt={project.title}
+                alt={`${project.title} project screenshot`}
+                width="640"
+                height="360"
+                loading={index < 2 ? "eager" : "lazy"}
+                decoding="async"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>
