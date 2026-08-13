@@ -1,5 +1,3 @@
-import Img from "../assets/profile.jpeg";
-
 const Hero = () => {
   return (
     <section
@@ -10,7 +8,7 @@ const Hero = () => {
       {/* Profile Image */}
       <div className="w-36 sm:w-48 h-36 sm:h-48 rounded-full overflow-hidden border-4 border-[rgb(19,127,181)] mb-6 shadow-md">
         <img
-          src={Img}
+          src="./profile.jpeg"
           alt="Yasir Rajput Profile"
           className="w-full h-full object-cover"
         />
