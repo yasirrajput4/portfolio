@@ -17,9 +17,6 @@ import {
   SiFastapi,
 } from "react-icons/si";
 
-import nexusai from "../assets/nexusai.webp";
-import blogify from "../assets/blogify.webp";
-
 const projects = [
   {
     title: "Blogify",
@@ -28,7 +25,7 @@ const projects = [
     tech: ["React", "TailwindCSS", "Redux Toolkit", "React Router"],
     github: "https://github.com/yasirrajput4/Blogify",
     live: "https://blogify-yasir.vercel.app",
-    image: blogify,
+    // image: blogify,
   },
   {
     title: "NexusAI",
@@ -37,7 +34,7 @@ const projects = [
     tech: ["React", "Vite", "TailwindCSS", "Groq API"],
     github: "https://github.com/yasirrajput4/NexusAI",
     live: "https://nexus-ai-yasir.vercel.app",
-    image: nexusai,
+    // image: nexusai,
   },
 ];
 
