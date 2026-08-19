@@ -2,37 +2,33 @@ const SKILLS_DATA = [
   {
     category: "Frontend",
     skills: [
-      "React",
-      "Vite",
-      "Redux Toolkit",
-      "Zustand",
-      "React Query",
-      "React Router",
       "JavaScript",
-      "HTML",
-      "CSS",
+      "HTML5",
+      "CSS3",
+      "React",
+      "React Router",
       "Tailwind CSS",
       "Bootstrap",
+      "Vite",
     ],
   },
   {
     category: "Backend & Security",
-    skills: ["Node.js", "Express.js", "FastAPI", "Python", "JWT"],
+    skills: ["Node.js", "Express.js", "JWT"],
   },
   {
-    category: "Database & Search",
-    skills: ["MongoDB", "PostgreSQL", "Elasticsearch", "Redis"],
+    category: "Database",
+    skills: ["MongoDB"],
   },
   {
-    category: "AI / ML",
-    skills: ["Groq API", "TensorFlow"],
+    category: "AI Integration",
+    skills: ["Groq API"],
   },
   {
-    category: "Tools & DevOps",
-    skills: ["Docker", "Git", "GitHub", "Postman"],
+    category: "Developer Tools",
+    skills: ["Git", "GitHub", "Postman"],
   },
 ];
-
 const About = () => {
   return (
     <section

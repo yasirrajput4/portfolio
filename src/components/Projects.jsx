@@ -17,47 +17,10 @@ import {
   SiFastapi,
 } from "react-icons/si";
 
-import mediprice from "../assets/mediprice.webp";
 import nexusai from "../assets/nexusai.webp";
 import blogify from "../assets/blogify.webp";
-import ecoUrbanistAi from "../assets/eco-urbanist-ai.webp";
 
 const projects = [
-  {
-    title: "MediPrice",
-    description:
-      "Compare and track medicine prices to help users find affordable healthcare options, featuring real-time search and price analytics dashboards.",
-    tech: [
-      "React",
-      "Vite",
-      "TailwindCSS",
-      "Node.js",
-      "PostgreSQL",
-      "Elasticsearch",
-      "Redis",
-      "Docker",
-    ],
-    github: "https://github.com/yasirrajput4/MediPrice",
-    live: "",
-    image: mediprice,
-  },
-  {
-    title: "Eco-Urbanist AI",
-    description:
-      "AI-driven tool for sustainable urban planning and eco-conscious city design, combining a Node API with a Python/FastAPI ML service.",
-    tech: [
-      "React",
-      "Node.js",
-      "MongoDB",
-      "Python",
-      "TensorFlow",
-      "Docker",
-      "FastAPI",
-    ],
-    github: "https://github.com/yasirrajput4/Eco-Urbanist-AI",
-    live: "",
-    image: ecoUrbanistAi,
-  },
   {
     title: "Blogify",
     description:
