@@ -34,7 +34,7 @@ const projects = [
     tech: ["React", "Vite", "TailwindCSS", "Groq API"],
     github: "https://github.com/yasirrajput4/NexusAI",
     live: "https://nexus-ai-yasir.vercel.app",
-    // image: nexusai,
+    // image: NexusAI,
   },
   {
     title: "WorldAtlas",
@@ -61,7 +61,7 @@ const projects = [
     tech: ["Vanilla JS", "HTML5 Drag & Drop", "CSS Flexbox"],
     github: "https://github.com/yasirrajput4/kanban-board",
     live: "https://kanban-board-yasir.vercel.app",
-    // image: kanbanBoard,
+    // image: KanbanBoard,
   },
   {
     title: "TechStore",

@@ -7,6 +7,7 @@ const SKILLS_DATA = [
       "CSS3",
       "React",
       "React Router",
+      "React Hook Form",
       "Tailwind CSS",
       "Bootstrap",
       "Vite",
@@ -26,7 +27,7 @@ const SKILLS_DATA = [
   },
   {
     category: "Developer Tools",
-    skills: ["Git", "GitHub", "Postman"],
+    skills: ["Git", "GitHub", "Postman", "Thunder Client"],
   },
 ];
 const About = () => {
