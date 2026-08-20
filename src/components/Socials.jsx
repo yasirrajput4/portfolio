@@ -1,4 +1,5 @@
-import { Linkedin, Github, Mail } from "lucide-react";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FiMail } from "react-icons/fi";
 import { BsWhatsapp } from "react-icons/bs";
 
 const Socials = () => {
@@ -11,7 +12,7 @@ const Socials = () => {
         className="text-gray-500 dark:text-gray-400 hover:text-[rgb(33,150,243)] dark:hover:text-[rgb(33,150,243)] hover:scale-110 transition-[color,transform] duration-200 inline-block p-1"
         aria-label="Visit Yasir's LinkedIn profile"
       >
-        <Linkedin size={22} />
+        <FaLinkedin size={22} />
       </a>
 
       <a
@@ -21,7 +22,7 @@ const Socials = () => {
         className="text-gray-500 dark:text-gray-400 hover:text-[rgb(33,150,243)] dark:hover:text-[rgb(33,150,243)] hover:scale-110 transition-[color,transform] duration-200 inline-block p-1"
         aria-label="Visit Yasir's GitHub profile"
       >
-        <Github size={22} />
+        <FaGithub size={22} />
       </a>
 
       <a
@@ -29,7 +30,7 @@ const Socials = () => {
         className="text-gray-500 dark:text-gray-400 hover:text-[rgb(33,150,243)] dark:hover:text-[rgb(33,150,243)] hover:scale-110 transition-[color,transform] duration-200 inline-block p-1"
         aria-label="Send an email to Yasir"
       >
-        <Mail size={22} />
+        <FiMail size={22} />
       </a>
 
       <a

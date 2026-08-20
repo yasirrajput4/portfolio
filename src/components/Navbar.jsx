@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, Sun, Moon } from "lucide-react";
+import { FiMenu, FiX, FiSun, FiMoon } from "react-icons/fi";
 
 const NAV_LINKS = [
   { href: "#home", label: "Home" },
@@ -17,7 +17,7 @@ const ThemeToggleButton = ({ theme, toggleTheme, className = "" }) => (
       theme === "dark" ? "Switch to light mode" : "Switch to dark mode"
     }
   >
-    {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+    {theme === "dark" ? <FiSun size={18} /> : <FiMoon size={18} />}
   </button>
 );
 
@@ -83,7 +83,7 @@ const Navbar = ({ theme, toggleTheme }) => {
             aria-expanded={isOpen}
             aria-controls="mobile-menu"
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
           </button>
         </div>
       </div>
