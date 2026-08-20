@@ -36,6 +36,42 @@ const projects = [
     live: "https://nexus-ai-yasir.vercel.app",
     // image: nexusai,
   },
+  {
+    title: "WorldAtlas",
+    description:
+      "A React country-explorer platform to search, filter, and sort 195+ nations with detailed profile insights, powered by REST Countries API.",
+    tech: ["React 19", "React Router 7", "Tailwind CSS 4", "Axios"],
+    github: "https://github.com/yasirrajput4/WorldAtlas",
+    live: "https://worldatlas-yasir.vercel.app",
+    // image: worldatlas,
+  },
+  {
+    title: "Async JS Projects",
+    description:
+      "Collection of 5 API-powered JavaScript applications built using native Fetch API, async/await, and clean responsive CSS.",
+    tech: ["JavaScript", "HTML5", "CSS3", "FreeAPI"],
+    github: "https://github.com/yasirrajput4/async-js-projects",
+    live: "https://async-js-projects.netlify.app",
+    // image: asyncJsProjects,
+  },
+  {
+    title: "Kanban Board",
+    description:
+      "A sleek task-management app featuring native drag-and-drop workflows across workflow columns, dynamic card management, and a modern dark interface.",
+    tech: ["Vanilla JS", "HTML5 Drag & Drop", "CSS Flexbox"],
+    github: "https://github.com/yasirrajput4/kanban-board",
+    live: "https://kanban-board-yasir.vercel.app",
+    // image: kanbanBoard,
+  },
+  {
+    title: "TechStore",
+    description:
+      "A responsive e-commerce storefront with live search, dynamic filtering, slide-in cart, and smooth scroll animations.",
+    tech: ["Vanilla JS", "HTML5", "CSS3", "Font Awesome"],
+    github: "https://github.com/yasirrajput4/ecommerce-frontend-techstore",
+    live: "https://ecommerce-frontend-techstore.netlify.app/",
+    // image: techStore,
+  },
 ];
 
 const techIcons = {

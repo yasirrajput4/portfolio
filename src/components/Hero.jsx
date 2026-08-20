@@ -27,7 +27,7 @@ const Hero = () => {
       </h2>
 
       <p className="text-gray-600 dark:text-gray-400 mt-4 max-w-md sm:max-w-xl md:max-w-2xl text-sm sm:text-base leading-relaxed">
-        CS Undergrad building intelligent MERN applications and AI-powered
+        CSE Undergrad building intelligent MERN applications and AI-powered
         platforms—from healthcare price trackers to sustainable urban planning
         tools.
       </p>
