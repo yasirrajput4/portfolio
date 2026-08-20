@@ -27,9 +27,8 @@ const Hero = () => {
       </h2>
 
       <p className="text-gray-600 dark:text-gray-400 mt-4 max-w-md sm:max-w-xl md:max-w-2xl text-sm sm:text-base leading-relaxed">
-        CSE Undergrad building intelligent MERN applications and AI-powered
-        platforms—from healthcare price trackers to sustainable urban planning
-        tools.
+        CSE Undergrad building modern web apps and AI interfaces—from secure CMS
+        blogging platforms to real-time LLM chat engines.
       </p>
 
       {/* Buttons */}
