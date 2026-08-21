@@ -1,95 +1,96 @@
 import { CiPlay1 } from "react-icons/ci";
 import { LuGithub } from "react-icons/lu";
-import { FaReact, FaNodeJs } from "react-icons/fa";
+import { FaReact, FaHtml5, FaCss3Alt } from "react-icons/fa";
 import {
   SiTailwindcss,
   SiRedux,
   SiJavascript,
-  SiPostgresql,
-  SiRedis,
-  SiDocker,
-  SiPython,
-  SiTensorflow,
   SiVite,
   SiReactrouter,
-  SiMongodb,
-  SiElasticsearch,
-  SiFastapi,
+  SiAxios,
+  SiFontawesome,
 } from "react-icons/si";
+import worldatlas from "../assets/a.png";
+import asyncJsProjects from "../assets/b.png";
+import NexusAI from "../assets/c.png";
+import blogify from "../assets/d.png";
+import KanbanBoard from "../assets/e.png";
+import techStore from "../assets/f.png";
 
 const projects = [
   {
     title: "Blogify",
     description:
-      "A full-featured blogging platform with rich content management, secure user authentication, and an intuitive WYSIWYG editing experience.",
+      "A full-featured blogging platform with secure authentication, rich content management, and a smooth WYSIWYG writing experience.",
     tech: ["React", "TailwindCSS", "Redux Toolkit", "React Router"],
     github: "https://github.com/yasirrajput4/Blogify",
     live: "https://blogify-yasir.vercel.app",
-    // image: blogify,
+    image: blogify,
   },
   {
     title: "NexusAI",
     description:
-      "AI-powered platform for smart, automated interactions, built with the Groq API running Llama 3.3 70B for lightning-fast responses.",
+      "An AI-powered chat platform running Llama 3.3 70B via the Groq API for near-instant, context-aware responses.",
     tech: ["React", "Vite", "TailwindCSS", "Groq API"],
     github: "https://github.com/yasirrajput4/NexusAI",
     live: "https://nexus-ai-yasir.vercel.app",
-    // image: NexusAI,
+    image: NexusAI,
   },
   {
     title: "WorldAtlas",
     description:
-      "A React country-explorer platform to search, filter, and sort 195+ nations with detailed profile insights, powered by REST Countries API.",
+      "A country-explorer app to search, filter, and compare 195+ nations with detailed profiles, powered by the REST Countries API.",
     tech: ["React 19", "React Router 7", "Tailwind CSS 4", "Axios"],
     github: "https://github.com/yasirrajput4/WorldAtlas",
     live: "https://worldatlas-yasir.vercel.app",
-    // image: worldatlas,
+    image: worldatlas,
   },
   {
     title: "Async JS Projects",
     description:
-      "Collection of 5 API-powered JavaScript applications built using native Fetch API, async/await, and clean responsive CSS.",
+      "Five API-driven JavaScript mini-apps built with the native Fetch API, async/await, and clean responsive layouts.",
     tech: ["JavaScript", "HTML5", "CSS3", "FreeAPI"],
     github: "https://github.com/yasirrajput4/async-js-projects",
     live: "https://async-js-projects.netlify.app",
-    // image: asyncJsProjects,
+    image: asyncJsProjects,
   },
   {
     title: "Kanban Board",
     description:
-      "A sleek task-management app featuring native drag-and-drop workflows across workflow columns, dynamic card management, and a modern dark interface.",
+      "A drag-and-drop task board with native HTML5 interactions, dynamic cards, and a polished dark interface.",
     tech: ["Vanilla JS", "HTML5 Drag & Drop", "CSS Flexbox"],
     github: "https://github.com/yasirrajput4/kanban-board",
     live: "https://kanban-board-yasir.vercel.app",
-    // image: KanbanBoard,
+    image: KanbanBoard,
   },
   {
     title: "TechStore",
     description:
-      "A responsive e-commerce storefront with live search, dynamic filtering, slide-in cart, and smooth scroll animations.",
+      "A responsive e-commerce storefront with live search, dynamic filtering, a slide-in cart, and smooth scroll animations.",
     tech: ["Vanilla JS", "HTML5", "CSS3", "Font Awesome"],
     github: "https://github.com/yasirrajput4/ecommerce-frontend-techstore",
     live: "https://ecommerce-frontend-techstore.netlify.app/",
-    // image: techStore,
+    image: techStore,
   },
 ];
 
 const techIcons = {
   React: <FaReact className="text-[#61dafb]" />,
+  "React 19": <FaReact className="text-[#61dafb]" />,
   JavaScript: <SiJavascript className="text-yellow-500" />,
+  "Vanilla JS": <SiJavascript className="text-yellow-500" />,
   "Redux Toolkit": <SiRedux className="text-[#764abc]" />,
   TailwindCSS: <SiTailwindcss className="text-[#38bdf8]" />,
-  "Node.js": <FaNodeJs className="text-green-600" />,
-  PostgreSQL: <SiPostgresql className="text-[#336791]" />,
-  Redis: <SiRedis className="text-[#DC382D]" />,
-  Docker: <SiDocker className="text-[#2496ED]" />,
-  Python: <SiPython className="text-[#3776AB]" />,
-  TensorFlow: <SiTensorflow className="text-[#FF6F00]" />,
+  "Tailwind CSS 4": <SiTailwindcss className="text-[#38bdf8]" />,
   Vite: <SiVite className="text-[#646CFF]" />,
   "React Router": <SiReactrouter className="text-[#CA4245]" />,
-  MongoDB: <SiMongodb className="text-[#47A248]" />,
-  Elasticsearch: <SiElasticsearch className="text-[#005571]" />,
-  FastAPI: <SiFastapi className="text-[#009688]" />,
+  "React Router 7": <SiReactrouter className="text-[#CA4245]" />,
+  Axios: <SiAxios className="text-[#5A29E4]" />,
+  HTML5: <FaHtml5 className="text-[#E34F26]" />,
+  "HTML5 Drag & Drop": <FaHtml5 className="text-[#E34F26]" />,
+  CSS3: <FaCss3Alt className="text-[#1572B6]" />,
+  "CSS Flexbox": <FaCss3Alt className="text-[#1572B6]" />,
+  "Font Awesome": <SiFontawesome className="text-[#528DD7]" />,
 };
 
 const Projects = () => {
@@ -99,11 +100,15 @@ const Projects = () => {
       className="bg-gray-100 dark:bg-gray-900 py-20 px-4 sm:px-6 lg:px-8 flex flex-col items-center transition-colors duration-300"
       style={{ fontFamily: "Montserrat, sans-serif" }}
     >
-      <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-2 text-center">
-        My Projects
-      </h2>
+      <div className="flex items-center gap-3 mb-2">
+        <span className="w-1.5 h-7 rounded-full bg-[rgb(33,150,243)]" />
+        <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-100 text-center">
+          My Projects
+        </h2>
+      </div>
       <p className="text-gray-500 dark:text-gray-400 mb-12 text-center text-sm sm:text-base max-w-md">
-        Some of my recent full-stack applications and AI integrations.
+        A selection of full-stack applications and AI integrations I've recently
+        shipped.
       </p>
 
       {/* Balanced 2-Column Grid */}
@@ -114,16 +119,18 @@ const Projects = () => {
             className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden w-full shadow-md border border-gray-200/80 dark:border-gray-700/50 transform transition-[transform,box-shadow] duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col group"
           >
             {/* Image Box */}
-            <div className="relative h-45 sm:h-55 overflow-hidden bg-gray-200 dark:bg-gray-700">
-              <img
-                src={project.image}
-                alt={`${project.title} project screenshot`}
-                width="640"
-                height="360"
-                loading={index < 2 ? "eager" : "lazy"}
-                decoding="async"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
+            <div className="relative h-45 sm:h-55 overflow-hidden bg-gray-800 dark:bg-black">
+              {project.image && (
+                <img
+                  src={project.image}
+                  alt={`${project.title} project screenshot`}
+                  width="640"
+                  height="360"
+                  loading={index < 2 ? "eager" : "lazy"}
+                  decoding="async"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              )}
             </div>
 
             {/* Content Box */}
