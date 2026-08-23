@@ -1,4 +1,10 @@
-import { FiLayout, FiServer, FiDatabase, FiCpu, FiTool } from "react-icons/fi";
+import {
+  FiLayout,
+  FiServer,
+  FiDatabase,
+  FiCpu,
+  FiTool,
+} from "react-icons/fi";
 
 const SKILLS_DATA = [
   {
@@ -46,7 +52,20 @@ const About = () => {
       style={{ fontFamily: "Montserrat, sans-serif" }}
     >
       {/* About Me Card */}
-      <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 sm:p-8 w-full max-w-4xl flex flex-col transition-colors duration-300">
+      <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden w-full max-w-4xl flex flex-col transition-colors duration-300">
+        {/* Editor tab bar — mirrors the project cards for a cohesive system */}
+        <div className="flex items-center gap-3 px-4 py-3 bg-[#1a2029] border-b-2 border-[rgb(33,150,243)]">
+          <div className="flex gap-1.5 shrink-0">
+            <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]/80" />
+            <span className="w-2.5 h-2.5 rounded-full bg-[#febc2e]/80" />
+            <span className="w-2.5 h-2.5 rounded-full bg-[#28c840]/80" />
+          </div>
+          <span className="font-mono text-xs sm:text-sm text-gray-300">
+            about.md
+          </span>
+        </div>
+
+        <div className="p-6 sm:p-8 flex flex-col">
         <div className="flex items-center gap-3 mb-4">
           <span className="w-1.5 h-7 rounded-full bg-[rgb(33,150,243)]" />
           <h2 className="text-2xl font-bold text-gray-700 dark:text-gray-100">
@@ -60,9 +79,10 @@ const About = () => {
             SAL, Ahmedabad
           </span>
           , focused on the MERN stack and AI integration. I enjoy turning
-          complex problems into simple, scalable applications — and I'm always
-          exploring new frameworks, refining backend architecture, and polishing
-          the small details that make a product feel effortless to use.
+          complex problems into simple, scalable applications — and I'm
+          always exploring new frameworks, refining backend architecture, and
+          polishing the small details that make a product feel effortless to
+          use.
         </p>
 
         {/* Skills Section */}
@@ -82,8 +102,11 @@ const About = () => {
                 className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4"
               >
                 {/* Category Title */}
-                <h4 className="flex items-center gap-2 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider w-full sm:w-44 shrink-0">
+                <h4 className="flex items-center gap-1.5 font-mono text-xs text-gray-500 dark:text-gray-400 tracking-wide w-full sm:w-48 shrink-0">
                   <Icon className="text-[rgb(33,150,243)] text-sm shrink-0" />
+                  <span className="text-emerald-600 dark:text-emerald-400">
+                    //
+                  </span>{" "}
                   {group.category}
                 </h4>
 
@@ -92,7 +115,7 @@ const About = () => {
                   {group.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="border border-[rgb(33,150,243)] text-[rgb(33,150,243)] px-3 py-1 rounded-md text-xs sm:text-sm font-medium hover:bg-[rgb(33,150,243)] hover:text-white transition-colors duration-200 cursor-pointer"
+                      className="font-mono border border-[rgb(33,150,243)] text-[rgb(33,150,243)] px-3 py-1 rounded-md text-xs sm:text-sm font-medium hover:bg-[rgb(33,150,243)] hover:text-white transition-colors duration-200 cursor-pointer"
                     >
                       {skill}
                     </span>
@@ -101,6 +124,7 @@ const About = () => {
               </div>
             );
           })}
+        </div>
         </div>
       </div>
     </section>

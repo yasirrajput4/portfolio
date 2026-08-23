@@ -35,9 +35,10 @@ const Navbar = ({ theme, toggleTheme }) => {
         <div className="flex-1 flex justify-start">
           <a
             href="#home"
-            className="text-lg font-bold text-gray-800 dark:text-gray-100 tracking-tight shrink-0"
+            className="font-mono text-lg font-bold text-gray-800 dark:text-gray-100 tracking-tight shrink-0"
           >
-            Yasir<span className="text-[rgb(33,150,243)]">.</span>
+            <span className="text-[rgb(33,150,243)]">&lt;</span>Yasir
+            <span className="text-[rgb(33,150,243)]"> /&gt;</span>
           </a>
         </div>
 
@@ -57,13 +58,15 @@ const Navbar = ({ theme, toggleTheme }) => {
 
         {/* RIGHT: Badge + Toggle Container (Takes 1/3 space on desktop) */}
         <div className="hidden md:flex flex-1 justify-end items-center gap-4">
-          <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-md text-xs lg:text-sm font-medium text-gray-700 dark:text-gray-200 bg-gray-200/60 dark:bg-gray-800/60 border border-gray-300/80 dark:border-gray-700/80 shrink-0">
+          <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-md text-xs lg:text-sm font-mono text-gray-700 dark:text-gray-200 bg-gray-200/60 dark:bg-gray-800/60 border border-gray-300/80 dark:border-gray-700/80 shrink-0">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
             </span>
-            <span className="hidden lg:inline">Open to New Opportunities</span>
-            <span className="lg:hidden">Available</span>
+            <span className="hidden lg:inline">
+              Status: <span className="text-[rgb(33,150,243)]">Available</span>
+            </span>
+            <span className="lg:hidden">available</span>
           </div>
           <ThemeToggleButton
             theme={theme}
@@ -107,12 +110,12 @@ const Navbar = ({ theme, toggleTheme }) => {
             </a>
           ))}
 
-          <div className="flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 bg-gray-200 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 mt-2 shadow-sm">
+          <div className="flex items-center gap-2 px-4 py-2 rounded-md text-sm font-mono text-gray-700 dark:text-gray-200 bg-gray-200 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 mt-2 shadow-sm">
             <span className="relative flex h-2.5 w-2.5">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
             </span>
-            Open to New Opportunities
+            Status: <span className="text-[rgb(33,150,243)]">Available</span>
           </div>
         </nav>
       </div>
