@@ -55,7 +55,7 @@ const About = () => {
             <span className="w-2.5 h-2.5 rounded-full bg-[#28c840]/80" />
           </div>
           <span className="font-mono text-xs sm:text-sm text-gray-300">
-            about.md
+            About.md
           </span>
         </div>
 
