@@ -25,14 +25,14 @@ const Hero = () => {
       <h2 className="text-3xl sm:text-4xl md:text-5xl text-gray-800 dark:text-gray-100 leading-snug">
         I'm{" "}
         <span className="font-bold text-[rgb(33,150,243)]">Yasir Rajput</span>,
-        <br className="hidden sm:inline" /> full-stack developer based in India.
+        <br className="hidden sm:inline" /> a Full-Stack Developer based in
+        India.
       </h2>
 
       <p className="text-gray-600 dark:text-gray-400 mt-4 max-w-md sm:max-w-xl md:max-w-2xl text-sm sm:text-base leading-relaxed">
-        CSE Undergrad building modern web apps and AI interfaces—from secure CMS
+        CSE undergrad building modern web apps and AI interfaces—from secure CMS
         blogging platforms to real-time LLM chat engines.
       </p>
-
       {/* Buttons */}
       <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto px-4 sm:px-0">
         <a
