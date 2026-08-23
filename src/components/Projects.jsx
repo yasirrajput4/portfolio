@@ -1,6 +1,7 @@
 import { CiPlay1 } from "react-icons/ci";
 import { LuGithub } from "react-icons/lu";
 import { FaReact, FaHtml5, FaCss3Alt } from "react-icons/fa";
+import { FiCpu, FiServer } from "react-icons/fi";
 import {
   SiTailwindcss,
   SiRedux,
@@ -14,7 +15,7 @@ import {
 const projects = [
   {
     title: "Blogify",
-    file: "blogify.jsx",
+    file: "Blogify.jsx",
     accent: "#38bdf8",
     description:
       "A full-featured blogging platform with secure authentication, rich content management, and a smooth WYSIWYG writing experience.",
@@ -24,7 +25,7 @@ const projects = [
   },
   {
     title: "NexusAI",
-    file: "nexus-ai.jsx",
+    file: "NexusAI.jsx",
     accent: "#a78bfa",
     description:
       "An AI-powered chat platform running Llama 3.3 70B via the Groq API for near-instant, context-aware responses.",
@@ -34,7 +35,7 @@ const projects = [
   },
   {
     title: "WorldAtlas",
-    file: "world-atlas.jsx",
+    file: "WorldAtlas.jsx",
     accent: "#34d399",
     description:
       "A country-explorer app to search, filter, and compare 195+ nations with detailed profiles, powered by the REST Countries API.",
@@ -44,7 +45,7 @@ const projects = [
   },
   {
     title: "Async JS Projects",
-    file: "async-js.js",
+    file: "Async-JS.js",
     accent: "#fbbf24",
     description:
       "Five API-driven JavaScript mini-apps built with the native Fetch API, async/await, and clean responsive layouts.",
@@ -54,7 +55,7 @@ const projects = [
   },
   {
     title: "Kanban Board",
-    file: "kanban-board.js",
+    file: "Kanban-Board.js",
     accent: "#fb7185",
     description:
       "A drag-and-drop task board with native HTML5 interactions, dynamic cards, and a polished dark interface.",
@@ -64,7 +65,7 @@ const projects = [
   },
   {
     title: "TechStore",
-    file: "tech-store.js",
+    file: "TechStore.js",
     accent: "#22d3ee",
     description:
       "A responsive e-commerce storefront with live search, dynamic filtering, a slide-in cart, and smooth scroll animations.",
@@ -81,6 +82,7 @@ const techIcons = {
   "Vanilla JS": <SiJavascript className="text-yellow-500" />,
   "Redux Toolkit": <SiRedux className="text-[#764abc]" />,
   TailwindCSS: <SiTailwindcss className="text-[#38bdf8]" />,
+  "Tailwind CSS": <SiTailwindcss className="text-[#38bdf8]" />,
   "Tailwind CSS 4": <SiTailwindcss className="text-[#38bdf8]" />,
   Vite: <SiVite className="text-[#646CFF]" />,
   "React Router": <SiReactrouter className="text-[#CA4245]" />,
@@ -91,6 +93,8 @@ const techIcons = {
   CSS3: <FaCss3Alt className="text-[#1572B6]" />,
   "CSS Flexbox": <FaCss3Alt className="text-[#1572B6]" />,
   "Font Awesome": <SiFontawesome className="text-[#528DD7]" />,
+  "Groq API": <FiCpu className="text-purple-400" />,
+  FreeAPI: <FiServer className="text-[#34d399]" />,
 };
 
 const Projects = () => {
@@ -101,7 +105,7 @@ const Projects = () => {
       style={{ fontFamily: "Montserrat, sans-serif" }}
     >
       <div className="flex items-center gap-3 mb-2">
-        <span className="w-1.5 h-7 rounded-full bg-[rgb(33,150,243)]" />
+        <span className="w-1.5 h-7 rounded-full bg-[#2196f3]" />
         <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-100 text-center">
           My Projects
         </h2>
@@ -118,7 +122,7 @@ const Projects = () => {
             key={project.title}
             className="group bg-white dark:bg-gray-800 rounded-xl overflow-hidden w-full shadow-md border border-gray-200/80 dark:border-gray-700/50 transform transition-[transform,box-shadow] duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col"
           >
-            {/* Editor Tab Bar — replaces the old image thumbnail */}
+            {/* Editor Tab Bar */}
             <div
               className="flex items-center justify-between gap-3 px-4 py-3 bg-[#1e2530] dark:bg-black/70 border-b-2 transition-colors duration-300"
               style={{ borderBottomColor: project.accent }}
@@ -134,7 +138,7 @@ const Projects = () => {
                 </span>
               </div>
 
-              {/* Links */}
+              {/* Action Links */}
               <div className="flex gap-1 shrink-0">
                 {project.github && (
                   <a
@@ -175,7 +179,7 @@ const Projects = () => {
                 </h3>
               </div>
 
-              <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed mb-5 md:min-h-18 lg:min-h-16 line-clamp-3">
+              <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed mb-5 line-clamp-3">
                 {project.description}
               </p>
 
