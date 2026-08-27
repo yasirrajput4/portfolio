@@ -1,5 +1,8 @@
 import { useForm, ValidationError } from "@formspree/react";
-import { FiSend, FiCheckCircle } from "react-icons/fi";
+import { FiSend, FiCheckCircle, FiMapPin, FiMail } from "react-icons/fi";
+
+const FIELD_CLASS =
+  "w-full bg-transparent border-0 border-b border-[#D8DCE3] dark:border-[#262B35] py-2.5 text-[#12151B] dark:text-[#E9ECF2] placeholder:text-[#565C6B]/50 dark:placeholder:text-[#9AA2B1]/40 focus:outline-none focus:border-[#2F6FED] dark:focus:border-[#5C8CFF] transition-colors duration-200 text-sm";
 
 function ContactForm() {
   const [state, handleSubmit] = useForm(import.meta.env.VITE_FORMSPREE_ID);
@@ -7,116 +10,134 @@ function ContactForm() {
   return (
     <section
       id="contact"
-      className="bg-gray-100 dark:bg-gray-900 py-20 px-4 sm:px-6 lg:px-8 flex flex-col items-center transition-colors duration-300"
+      className="bg-[#F4F5F7] dark:bg-[#0B0E13] text-[#12151B] dark:text-[#E9ECF2] py-20 sm:py-24 px-4 sm:px-6 lg:px-8 transition-colors duration-300"
     >
-      <div className="flex items-center gap-3 mb-2">
-        <span className="w-1.5 h-7 rounded-full bg-[rgb(33,150,243)]" />
-        <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-100 text-center">
-          Get in Touch
+      <div className="max-w-6xl mx-auto">
+        <p className="font-mono text-xs tracking-[0.2em] uppercase text-[#2F6FED] dark:text-[#5C8CFF] mb-3">
+          Contact
+        </p>
+        <h2 className="font-display font-semibold text-3xl sm:text-4xl tracking-tight mb-14">
+          Let's build something
         </h2>
-      </div>
-      <p className="text-gray-500 dark:text-gray-400 mb-10 text-center text-sm sm:text-base max-w-md">
-        Have a project in mind or just want to say hi? Drop me a message below.
-      </p>
 
-      <div className="w-full max-w-xl bg-white dark:bg-gray-800 rounded-xl shadow-md border border-gray-200/80 dark:border-gray-700/50 p-6 sm:p-8 transition-colors duration-300">
-        {state.succeeded ? (
-          <div className="flex flex-col items-center justify-center py-10 text-center space-y-4 animate-fade-in">
-            <FiCheckCircle className="text-5xl text-green-500 dark:text-green-400 animate-[pulse_2s_cubic-bezier(0.16,1,0.3,1)_infinite]" />
-            <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100">
-              Message Sent Successfully!
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400 text-sm max-w-sm">
-              Thanks for reaching out, Yasir. I've received your text and will
-              get back to you shortly.
+        <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-12 lg:gap-16">
+          {/* Contact info */}
+          <div>
+            <p className="text-[#565C6B] dark:text-[#9AA2B1] text-base leading-relaxed mb-8">
+              Have a project in mind or just want to say hi? Send a message and
+              I'll get back to you shortly.
             </p>
+
+            <dl className="space-y-4 border-t border-[#D8DCE3] dark:border-[#262B35] pt-6">
+              <div className="flex items-center gap-3">
+                <FiMail className="text-[#2F6FED] dark:text-[#5C8CFF] shrink-0" />
+                <dd className="font-mono text-sm">rajputyasir2005@gmail.com</dd>
+              </div>
+              <div className="flex items-center gap-3">
+                <FiMapPin className="text-[#2F6FED] dark:text-[#5C8CFF] shrink-0" />
+                <dd className="font-mono text-sm">Ahmedabad, India</dd>
+              </div>
+            </dl>
           </div>
-        ) : (
-          /* Contact Form */
-          <form onSubmit={handleSubmit} className="space-y-5">
-            {/* Name Field */}
-            <div className="flex flex-col">
-              <label
-                htmlFor="name"
-                className="text-gray-700 dark:text-gray-200 text-sm font-medium mb-1.5"
-              >
-                Name
-              </label>
-              <input
-                id="name"
-                type="text"
-                name="name"
-                placeholder="Your Name"
-                required
-                className="w-full p-2.5 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-[rgb(33,150,243)] focus:border-transparent transition-colors duration-200 text-sm"
-              />
-            </div>
 
-            {/* Email Field */}
-            <div className="flex flex-col">
-              <label
-                htmlFor="email"
-                className="text-gray-700 dark:text-gray-200 text-sm font-medium mb-1.5"
-              >
-                Email Address
-              </label>
-              <input
-                id="email"
-                type="email"
-                name="email"
-                placeholder="you@example.com"
-                required
-                className="w-full p-2.5 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-[rgb(33,150,243)] focus:border-transparent transition-colors duration-200 text-sm"
-              />
-              <ValidationError
-                prefix="Email"
-                field="email"
-                errors={state.errors}
-                className="text-red-500 text-xs mt-1"
-              />
-            </div>
+          {/* Form */}
+          <div>
+            {state.succeeded ? (
+              <div className="flex flex-col items-start justify-center py-10 text-left space-y-3 animate-fade-in">
+                <FiCheckCircle className="text-4xl text-emerald-500 dark:text-emerald-400" />
+                <h3 className="text-lg font-semibold">
+                  Message sent successfully
+                </h3>
+                <p className="text-[#565C6B] dark:text-[#9AA2B1] text-sm max-w-sm">
+                  Thanks for reaching out. I've received your message and will
+                  get back to you shortly.
+                </p>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-7">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-7">
+                  <div className="flex flex-col">
+                    <label
+                      htmlFor="name"
+                      className="font-mono text-[11px] tracking-[0.1em] uppercase text-[#565C6B] dark:text-[#9AA2B1] mb-2"
+                    >
+                      Name
+                    </label>
+                    <input
+                      id="name"
+                      type="text"
+                      name="name"
+                      placeholder="Your name"
+                      required
+                      className={FIELD_CLASS}
+                    />
+                  </div>
 
-            {/* Message Field */}
-            <div className="flex flex-col">
-              <label
-                htmlFor="message"
-                className="text-gray-700 dark:text-gray-200 text-sm font-medium mb-1.5"
-              >
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                placeholder="Write your message here..."
-                required
-                rows="4"
-                className="w-full p-2.5 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-[rgb(33,150,243)] focus:border-transparent resize-none transition-colors duration-200 text-sm"
-              />
-              <ValidationError
-                prefix="Message"
-                field="message"
-                errors={state.errors}
-                className="text-red-500 text-xs mt-1"
-              />
-            </div>
+                  <div className="flex flex-col">
+                    <label
+                      htmlFor="email"
+                      className="font-mono text-[11px] tracking-[0.1em] uppercase text-[#565C6B] dark:text-[#9AA2B1] mb-2"
+                    >
+                      Email
+                    </label>
+                    <input
+                      id="email"
+                      type="email"
+                      name="email"
+                      placeholder="you@example.com"
+                      required
+                      className={FIELD_CLASS}
+                    />
+                    <ValidationError
+                      prefix="Email"
+                      field="email"
+                      errors={state.errors}
+                      className="text-red-500 text-xs mt-1"
+                    />
+                  </div>
+                </div>
 
-            {/* Submit Button */}
-            <button
-              type="submit"
-              disabled={state.submitting}
-              className="w-full py-3 bg-[rgb(33,150,243)] hover:bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-[background-color,box-shadow] duration-200 text-sm cursor-pointer flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
-            >
-              {state.submitting ? (
-                "Sending..."
-              ) : (
-                <>
-                  <span>Send Message</span>
-                  <FiSend className="text-xs" />
-                </>
-              )}
-            </button>
-          </form>
-        )}
+                <div className="flex flex-col">
+                  <label
+                    htmlFor="message"
+                    className="font-mono text-[11px] tracking-[0.1em] uppercase text-[#565C6B] dark:text-[#9AA2B1] mb-2"
+                  >
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Write your message here..."
+                    required
+                    rows="4"
+                    className={`${FIELD_CLASS} resize-none`}
+                  />
+                  <ValidationError
+                    prefix="Message"
+                    field="message"
+                    errors={state.errors}
+                    className="text-red-500 text-xs mt-1"
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={state.submitting}
+                  className="inline-flex items-center justify-center gap-2 bg-[#2F6FED] hover:bg-[#2558C4] text-white font-medium rounded-md px-6 py-3 text-sm transition-colors duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
+                >
+                  {state.submitting ? (
+                    "Sending..."
+                  ) : (
+                    <>
+                      Send message
+                      <FiSend className="text-xs" />
+                    </>
+                  )}
+                </button>
+              </form>
+            )}
+          </div>
+        </div>
       </div>
     </section>
   );
