@@ -12,7 +12,7 @@ const ThemeToggleButton = ({ theme, toggleTheme, className = "" }) => (
   <button
     type="button"
     onClick={toggleTheme}
-    className={`flex items-center justify-center w-10 h-10 rounded-md border border-gray-300 dark:border-gray-700 text-gray-600 dark:text-gray-300 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors duration-200 ${className}`}
+    className={`flex items-center justify-center w-10 h-10 rounded-md border border-[#D8DCE3] dark:border-[#262B35] text-[#565C6B] dark:text-[#9AA2B1] hover:border-[#2F6FED] hover:text-[#2F6FED] dark:hover:border-[#5C8CFF] dark:hover:text-[#5C8CFF] transition-colors duration-200 ${className}`}
     aria-label={
       theme === "dark" ? "Switch to light mode" : "Switch to dark mode"
     }
@@ -21,67 +21,60 @@ const ThemeToggleButton = ({ theme, toggleTheme, className = "" }) => (
   </button>
 );
 
+const StatusPill = ({ className = "" }) => (
+  <div
+    className={`flex items-center gap-2 px-3.5 py-1.5 rounded-md text-xs font-mono text-[#565C6B] dark:text-[#9AA2B1] border border-[#D8DCE3] dark:border-[#262B35] ${className}`}
+  >
+    <span className="relative flex h-2 w-2">
+      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+      <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+    </span>
+    Available
+  </div>
+);
+
 const Navbar = ({ theme, toggleTheme }) => {
   const [isOpen, setIsOpen] = useState(false);
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <header
-      className="sticky top-0 z-50 bg-gray-100/90 dark:bg-gray-900/90 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 transition-colors duration-300"
-      style={{ fontFamily: "Montserrat, sans-serif" }}
-    >
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 sm:px-10 py-4">
-        {/* LEFT: Logo Container (Takes 1/3 space on desktop) */}
-        <div className="flex-1 flex justify-start">
-          <a
-            href="#home"
-            className="font-mono text-lg font-bold text-gray-800 dark:text-gray-100 tracking-tight shrink-0"
-          >
-            <span className="text-[rgb(33,150,243)]">&lt;</span>Yasir
-            <span className="text-[rgb(33,150,243)]"> /&gt;</span>
-          </a>
-        </div>
+    <header className="sticky top-0 z-50 bg-[#F4F5F7]/90 dark:bg-[#0B0E13]/90 backdrop-blur-sm border-b border-[#D8DCE3] dark:border-[#262B35] transition-colors duration-300">
+      <div className="max-w-6xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 py-4">
+        {/* Logo */}
+        <a
+          href="#home"
+          className="font-display font-semibold text-lg text-[#12151B] dark:text-[#E9ECF2] tracking-tight shrink-0"
+        >
+          Yasir<span className="text-[#2F6FED]">.</span>
+        </a>
 
-        {/* CENTER: Desktop Nav Links */}
-        <nav className="hidden md:flex items-center gap-8 text-gray-500 dark:text-gray-400 text-base font-medium shrink-0">
+        {/* Desktop Nav Links */}
+        <nav className="hidden md:flex items-center gap-9 text-sm font-medium text-[#565C6B] dark:text-[#9AA2B1]">
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="relative py-1 transition-colors duration-200 hover:text-[rgb(33,150,243)] group"
+              className="relative py-1 transition-colors duration-200 hover:text-[#2F6FED] dark:hover:text-[#5C8CFF] group"
             >
               {link.label}
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[rgb(33,150,243)] transition-[width] duration-300 group-hover:w-full"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-px bg-[#2F6FED] dark:bg-[#5C8CFF] transition-[width] duration-300 group-hover:w-full" />
             </a>
           ))}
         </nav>
 
-        {/* RIGHT: Badge + Toggle Container (Takes 1/3 space on desktop) */}
-        <div className="hidden md:flex flex-1 justify-end items-center gap-4">
-          <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-md text-xs lg:text-sm font-mono text-gray-700 dark:text-gray-200 bg-gray-200/60 dark:bg-gray-800/60 border border-gray-300/80 dark:border-gray-700/80 shrink-0">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-            </span>
-            <span className="hidden lg:inline">
-              Status: <span className="text-[rgb(33,150,243)]">Available</span>
-            </span>
-            <span className="lg:hidden">available</span>
-          </div>
-          <ThemeToggleButton
-            theme={theme}
-            toggleTheme={toggleTheme}
-            className="shrink-0"
-          />
+        {/* Right controls */}
+        <div className="hidden md:flex items-center gap-3">
+          <StatusPill />
+          <ThemeToggleButton theme={theme} toggleTheme={toggleTheme} />
         </div>
 
-        {/* MOBILE: Right-aligned Controls */}
+        {/* Mobile controls */}
         <div className="flex items-center gap-2 md:hidden">
           <ThemeToggleButton theme={theme} toggleTheme={toggleTheme} />
           <button
             type="button"
             onClick={() => setIsOpen((prev) => !prev)}
-            className="text-gray-700 dark:text-gray-200 p-2 -mr-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"
+            className="text-[#12151B] dark:text-[#E9ECF2] p-2 -mr-2 rounded-md hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
             aria-label={isOpen ? "Close menu" : "Open menu"}
             aria-expanded={isOpen}
             aria-controls="mobile-menu"
@@ -91,32 +84,25 @@ const Navbar = ({ theme, toggleTheme }) => {
         </div>
       </div>
 
-      {/* Mobile Menu Slider */}
+      {/* Mobile Menu */}
       <div
         id="mobile-menu"
         className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
           isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <nav className="flex flex-col items-center gap-4 py-5 bg-gray-100/95 dark:bg-gray-900/95 border-t border-gray-200 dark:border-gray-800 text-gray-600 dark:text-gray-300 text-base font-medium">
+        <nav className="flex flex-col items-center gap-4 py-5 bg-[#F4F5F7]/95 dark:bg-[#0B0E13]/95 border-t border-[#D8DCE3] dark:border-[#262B35] text-[#565C6B] dark:text-[#9AA2B1] text-base font-medium">
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={closeMenu}
-              className="w-full text-center py-2 hover:text-[rgb(33,150,243)] transition-colors"
+              className="w-full text-center py-2 hover:text-[#2F6FED] dark:hover:text-[#5C8CFF] transition-colors"
             >
               {link.label}
             </a>
           ))}
-
-          <div className="flex items-center gap-2 px-4 py-2 rounded-md text-sm font-mono text-gray-700 dark:text-gray-200 bg-gray-200 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 mt-2 shadow-sm">
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
-            </span>
-            Status: <span className="text-[rgb(33,150,243)]">Available</span>
-          </div>
+          <StatusPill className="mt-1" />
         </nav>
       </div>
     </header>
