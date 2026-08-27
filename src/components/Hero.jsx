@@ -5,7 +5,7 @@ import { FiArrowUpRight, FiDownload } from "react-icons/fi";
 const SPECS = [
   { label: "Name", value: "Yasir Rajput" },
   { label: "Role", value: "Full-Stack Developer" },
-  { label: "Stack", value: "React · Node.js · MongoDB" },
+  { label: "Stack", value: "React · Express.js · Node.js · MongoDB" },
   { label: "Focus", value: "AI-powered interfaces" },
   { label: "Based in", value: "Ahmedabad, India" },
 ];
