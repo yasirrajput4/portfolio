@@ -13,7 +13,7 @@ export default function App() {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <div className="bg-gray-100 dark:bg-gray-900 font-sans min-h-screen overflow-x-hidden relative transition-colors duration-300">
+    <div className="bg-[#F4F5F7] dark:bg-[#0B0E13] font-sans min-h-screen overflow-x-hidden relative transition-colors duration-300">
       <Navbar theme={theme} toggleTheme={toggleTheme} />
 
       <Socials />
