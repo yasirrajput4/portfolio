@@ -59,7 +59,7 @@ function ContactForm() {
                   <div className="flex flex-col">
                     <label
                       htmlFor="name"
-                      className="font-mono text-[11px] tracking-[0.1em] uppercase text-[#565C6B] dark:text-[#9AA2B1] mb-2"
+                      className="font-mono text-[11px] tracking-widest uppercase text-[#565C6B] dark:text-[#9AA2B1] mb-2"
                     >
                       Name
                     </label>
@@ -76,7 +76,7 @@ function ContactForm() {
                   <div className="flex flex-col">
                     <label
                       htmlFor="email"
-                      className="font-mono text-[11px] tracking-[0.1em] uppercase text-[#565C6B] dark:text-[#9AA2B1] mb-2"
+                      className="font-mono text-[11px] tracking-widest uppercase text-[#565C6B] dark:text-[#9AA2B1] mb-2"
                     >
                       Email
                     </label>
@@ -100,7 +100,7 @@ function ContactForm() {
                 <div className="flex flex-col">
                   <label
                     htmlFor="message"
-                    className="font-mono text-[11px] tracking-[0.1em] uppercase text-[#565C6B] dark:text-[#9AA2B1] mb-2"
+                    className="font-mono text-[11px] tracking-widest uppercase text-[#565C6B] dark:text-[#9AA2B1] mb-2"
                   >
                     Message
                   </label>

@@ -120,7 +120,7 @@ const Projects = () => {
               className="group relative pl-5 py-6 border-b border-[#D8DCE3] dark:border-[#262B35]"
             >
               <span
-                className="absolute left-0 top-6 bottom-6 w-[3px] rounded-full transition-[bottom,top] duration-300 group-hover:top-5 group-hover:bottom-5"
+                className="absolute left-0 top-6 bottom-6 w-0.75 rounded-full transition-[bottom,top] duration-300 group-hover:top-5 group-hover:bottom-5"
                 style={{ backgroundColor: project.accent }}
               />
 
@@ -129,7 +129,7 @@ const Projects = () => {
                   <h3 className="font-display font-semibold text-xl">
                     {project.title}
                   </h3>
-                  <span className="font-mono text-[11px] tracking-[0.1em] uppercase text-[#565C6B] dark:text-[#9AA2B1]">
+                  <span className="font-mono text-[11px] tracking-widest uppercase text-[#565C6B] dark:text-[#9AA2B1]">
                     {project.tag}
                   </span>
                 </div>

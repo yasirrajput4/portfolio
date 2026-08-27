@@ -86,7 +86,7 @@ const About = () => {
                   key={group.category}
                   className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-6 py-5 border-b border-[#D8DCE3] dark:border-[#262B35]"
                 >
-                  <h3 className="flex items-center gap-2 font-mono text-xs tracking-[0.1em] uppercase text-[#565C6B] dark:text-[#9AA2B1] w-full sm:w-44 shrink-0 pt-0.5">
+                  <h3 className="flex items-center gap-2 font-mono text-xs tracking-widest uppercase text-[#565C6B] dark:text-[#9AA2B1] w-full sm:w-44 shrink-0 pt-0.5">
                     <Icon className="text-[#2F6FED] dark:text-[#5C8CFF] text-sm shrink-0" />
                     {group.category}
                   </h3>
