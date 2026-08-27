@@ -42,78 +42,67 @@ const About = () => {
   return (
     <section
       id="about"
-      className="bg-gray-100 dark:bg-gray-900 text-black py-12 px-4 sm:px-6 lg:px-8 flex flex-col items-center transition-colors duration-300"
-      style={{ fontFamily: "Montserrat, sans-serif" }}
+      className="bg-[#F4F5F7] dark:bg-[#0B0E13] text-[#12151B] dark:text-[#E9ECF2] py-20 sm:py-24 px-4 sm:px-6 lg:px-8 transition-colors duration-300"
     >
-      {/* About Me Card */}
-      <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden w-full max-w-4xl flex flex-col transition-colors duration-300">
-        {/* Editor tab bar */}
-        <div className="flex items-center gap-3 px-4 py-3 bg-[#1a2029] border-b-2 border-[#2196f3]">
-          <div className="flex gap-1.5 shrink-0">
-            <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]/80" />
-            <span className="w-2.5 h-2.5 rounded-full bg-[#febc2e]/80" />
-            <span className="w-2.5 h-2.5 rounded-full bg-[#28c840]/80" />
-          </div>
-          <span className="font-mono text-xs sm:text-sm text-gray-300">
-            About.md
-          </span>
-        </div>
+      <div className="max-w-6xl mx-auto">
+        <p className="font-mono text-xs tracking-[0.2em] uppercase text-[#2F6FED] dark:text-[#5C8CFF] mb-3">
+          About
+        </p>
+        <h2 className="font-display font-semibold text-3xl sm:text-4xl tracking-tight mb-14">
+          Who I am
+        </h2>
 
-        <div className="p-6 sm:p-8 flex flex-col">
-          {/* About Header */}
-          <div className="flex items-center gap-3 mb-4">
-            <span className="w-1.5 h-7 rounded-full bg-[#2196f3]" />
-            <h2 className="text-2xl font-bold text-gray-700 dark:text-gray-100">
-              About Me
-            </h2>
-          </div>
+        <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-12 lg:gap-16">
+          {/* Narrative */}
+          <div>
+            <p className="text-[#565C6B] dark:text-[#9AA2B1] text-base sm:text-lg leading-relaxed">
+              I'm a Computer Science and Engineering undergraduate at{" "}
+              <span className="font-semibold text-[#12151B] dark:text-[#E9ECF2]">
+                SAL Institute of Technology, Ahmedabad
+              </span>
+              , focused on the MERN stack and AI integration. I enjoy turning
+              complex problems into simple, scalable applications — and I'm
+              always exploring new frameworks, refining backend architecture,
+              and polishing the small details that make a product feel
+              effortless to use.
+            </p>
 
-          <p className="text-gray-700 dark:text-gray-300 text-sm sm:text-base leading-relaxed mb-8">
-            I'm a Computer Science and Engineering undergraduate at{" "}
-            <span className="font-bold text-[#2196f3]">
-              SAL Institute of Technology, Ahmedabad
-            </span>
-            , focused on the MERN stack and AI integration. I enjoy turning
-            complex problems into simple, scalable applications — and I'm always
-            exploring new frameworks, refining backend architecture, and
-            polishing the small details that make a product feel effortless to
-            use.
-          </p>
-
-          {/* Skills Header */}
-          <div className="flex items-center gap-3 mb-5 border-b pb-3 dark:border-gray-700">
-            <span className="w-1.5 h-6 rounded-full bg-[#2196f3]" />
-            <h3 className="text-xl font-bold text-gray-700 dark:text-gray-100">
-              Skills & Technologies
-            </h3>
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 mt-8 text-sm font-medium text-[#2F6FED] dark:text-[#5C8CFF] hover:gap-3 transition-[gap] duration-200"
+            >
+              View full résumé →
+            </a>
           </div>
 
-          {/* Skills Grid */}
-          <div className="space-y-5">
+          {/* Skills manifest */}
+          <div className="border-t border-[#D8DCE3] dark:border-[#262B35]">
             {SKILLS_DATA.map((group) => {
               const Icon = group.icon;
               return (
                 <div
                   key={group.category}
-                  className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4"
+                  className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-6 py-5 border-b border-[#D8DCE3] dark:border-[#262B35]"
                 >
-                  {/* Category Title */}
-                  <h4 className="flex items-center gap-1.5 font-mono text-xs text-gray-500 dark:text-gray-400 tracking-wide w-full sm:w-48 shrink-0">
-                    <Icon className="text-[#2196f3] text-sm shrink-0" />
-                    <span className="text-emerald-600 dark:text-emerald-400">
-                      //
-                    </span>{" "}
+                  <h3 className="flex items-center gap-2 font-mono text-xs tracking-[0.1em] uppercase text-[#565C6B] dark:text-[#9AA2B1] w-full sm:w-44 shrink-0 pt-0.5">
+                    <Icon className="text-[#2F6FED] dark:text-[#5C8CFF] text-sm shrink-0" />
                     {group.category}
-                  </h4>
+                  </h3>
 
-                  {/* Category Skills */}
-                  <div className="flex flex-wrap gap-2">
-                    {group.skills.map((skill) => (
+                  <div className="flex flex-wrap gap-x-2 gap-y-1.5">
+                    {group.skills.map((skill, i) => (
                       <span
                         key={skill}
-                        className="font-mono border border-[#2196f3] text-[#2196f3] px-3 py-1 rounded-md text-xs sm:text-sm font-medium hover:bg-[#2196f3] hover:text-white transition-colors duration-200 cursor-pointer"
+                        className="text-sm text-[#12151B] dark:text-[#E9ECF2]"
                       >
                         {skill}
+                        {i < group.skills.length - 1 && (
+                          <span className="text-[#D8DCE3] dark:text-[#262B35] ml-2">
+                            /
+                          </span>
+                        )}
                       </span>
                     ))}
                   </div>
