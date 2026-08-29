@@ -5,11 +5,6 @@ const TickCorner = ({ className }) => (
   />
 );
 
-/**
- * A bordered panel with blueprint-style corner ticks.
- * Reserved for the hero's signature spec panel so the motif
- * stays a single, deliberate moment rather than a repeated decoration.
- */
 const SpecFrame = ({ children, className = "" }) => (
   <div className={`relative ${className}`}>
     <TickCorner className="top-0 left-0 border-t-2 border-l-2" />
