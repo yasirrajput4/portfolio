@@ -5,11 +5,12 @@ const SKILLS_DATA = [
     category: "Frontend",
     icon: FiLayout,
     skills: [
-      "JavaScript",
       "HTML5",
       "CSS3",
+      "JavaScript",
       "React",
       "React Router",
+      "TanStack Query",
       "React Hook Form",
       "Tailwind CSS",
       "Bootstrap",
