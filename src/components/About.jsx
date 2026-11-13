@@ -13,8 +13,6 @@ const SKILLS_DATA = [
       "TanStack Query",
       "React Hook Form",
       "Tailwind CSS",
-      "Bootstrap",
-      "Vite",
     ],
   },
   {
